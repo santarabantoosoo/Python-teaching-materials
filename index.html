@@ -3,21 +3,30 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="refresh" content="0; url=robot-mascot.html" />
-<link rel="canonical" href="robot-mascot.html" />
 <title>Python Teaching Materials</title>
 <style>
-  body{font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0}
-  a{color:#facc15;font-weight:700}
-  .box{text-align:center}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:radial-gradient(1000px 600px at 50% -10%,#1e3a5f 0%,#0f172a 60%);color:#e2e8f0;margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:32px 16px 48px}
+  h1{margin:6px 0 4px;font-size:clamp(1.4rem,3vw,2rem)}
+  p.sub{margin:0 0 24px;color:#94a3b8;text-align:center;max-width:560px}
+  ul.apps{list-style:none;margin:0;padding:0;display:grid;gap:12px;width:min(520px,100%)}
+  ul.apps a{display:flex;gap:12px;align-items:center;background:#1e293b;border:1px solid #334155;border-radius:16px;padding:16px;text-decoration:none;color:#e2e8f0}
+  ul.apps a:hover{border-color:#22d3ee}
+  ul.apps .emoji{font-size:1.6rem}
+  ul.apps strong{display:block;font-size:1rem}
+  ul.apps small{color:#94a3b8}
+  footer{margin-top:24px;color:#64748b;font-size:.8rem}
 </style>
 </head>
 <body>
-<div class="box">
-  <h1>🤖 E2E Robot Mascot</h1>
-  <p>Redirecting to <a href="robot-mascot.html">robot-mascot.html</a>…</p>
-  <p>If not redirected, click the link.</p>
-</div>
-<script>location.replace("robot-mascot.html");</script>
+<h1>🐍 Python Teaching Materials</h1>
+<p class="sub">Interactive HTML apps for class. Click to open.</p>
+<ul class="apps">
+  <li><a href="robot-mascot.html"><span class="emoji">🤖</span><span><strong>E2E Robot Mascot</strong><small>Click parts to light up: input, output, arithmetic, randomness, selection, iteration</small></span></a></li>
+  <!-- ADD NEW APPS HERE: copy the <li> line above and change href + title, e.g.
+  <li><a href="my-new-app.html"><span class="emoji">🎮</span><span><strong>My New App</strong><small>Short description</small></span></a></li>
+  -->
+</ul>
+<footer>Hosted with GitHub Pages</footer>
 </body>
 </html>
