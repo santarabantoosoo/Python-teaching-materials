@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>E2E Robot Mascot — Click to Light Up</title>
+<style>
+  :root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --dim-opacity:.38;
+    --accent:#22d3ee;
+    --accent2:#facc15;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    background:radial-gradient(1000px 600px at 50% -10%, #1e3a5f 0%, var(--bg) 60%);
+    color:#e2e8f0; min-height:100vh; display:flex; flex-direction:column; align-items:center;
+    padding:24px 16px 48px;
+  }
+  h1{margin:6px 0 2px; font-size:clamp(1.4rem,3vw,2rem); text-align:center}
+  h1 span{color:var(--accent2)}
+  p.sub{margin:0 0 16px; color:#94a3b8; text-align:center; max-width:640px}
+  .layout{
+    width:min(420px,100%);
+    display:grid; gap:16px;
+  }
+  .controls{
+    background:var(--card); border:1px solid #334155; border-radius:20px; padding:16px;
+  }
+  .stage{
+    background:linear-gradient(180deg,#1e293b,#0b1220);
+    border:1px solid #334155; border-radius:20px; padding:12px;
+    box-shadow:0 20px 60px rgba(0,0,0,.45); position:relative; overflow:hidden;
+  }
+  .stage::before{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(300px 200px at 50% 70%, rgba(34,211,238,.18), transparent 70%);
+    pointer-events:none;
+  }
+  svg{width:100%; height:auto; display:block}
+  .part{
+    cursor:pointer; opacity:var(--dim-opacity); filter:grayscale(1) brightness(.7);
+    transition:opacity .35s ease, filter .35s ease, transform .15s ease;
+    outline:none;
+  }
+  .part:hover{ transform:scale(1.02) }
+  .part:focus-visible{ stroke:#fff; stroke-width:2; stroke-dasharray:6 4 }
+  .part.lit{
+    opacity:1; filter:none;
+    /* glow */
+    filter:drop-shadow(0 0 10px rgba(34,211,238,.9)) drop-shadow(0 0 22px rgba(250,204,21,.35));
+  }
+  .part-label{
+    font:700 13px system-ui,sans-serif; fill:#e2e8f0;
+    paint-order:stroke; stroke:#0f172a; stroke-width:4px;
+  }
+  .part-tag{
+    font:700 11px system-ui,sans-serif;
+  }
+  .controls{
+    background:var(--card); border:1px solid #334155; border-radius:20px; padding:16px;
+  }
+  .progress-wrap{margin-bottom:12px}
+  .progress-top{display:flex; justify-content:space-between; font-size:.9rem; color:#cbd5e1; margin-bottom:6px}
+  .bar{height:12px; background:#0f172a; border-radius:999px; overflow:hidden; border:1px solid #334155}
+  .bar > div{height:100%; width:0%; background:linear-gradient(90deg,var(--accent),var(--accent2)); transition:width .4s ease}
+  .btns{display:flex; gap:8px; margin-top:12px}
+  .btns button{flex:1}
+  button{
+    border:1px solid #334155; background:#0f172a; color:#e2e8f0;
+    padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:700; font-size:.9rem;
+  }
+  button:hover{border-color:var(--accent)}
+  button.primary{background:var(--accent2); color:#111827; border-color:transparent}
+  button.primary:hover{filter:brightness(1.05)}
+  #celebrate{
+    display:none; margin-top:12px; padding:12px; border-radius:14px; text-align:center;
+    background:linear-gradient(90deg,#052e16,#14532d); border:1px solid #22c55e; font-weight:800;
+  }
+  #celebrate.show{display:block; animation:pop .5s ease}
+  @keyframes pop{from{transform:scale(.9); opacity:0} to{transform:scale(1); opacity:1}}
+  footer{margin-top:16px; color:#64748b; font-size:.8rem; text-align:center}
+</style>
+</head>
+<body>
+<h1>🤖 E2E Robot Mascot — <span>click parts to light up</span></h1>
+<p class="sub">The robot starts <b>dim</b>. Click any labelled part to light it. Light all 7 to wake the full E2E program!</p>
+
+<div class="layout">
+  <div class="stage" aria-label="Robot mascot">
+    <svg viewBox="0 0 420 560" role="img" aria-label="Clickable robot with labelled parts">
+      <defs>
+        <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#0369a1"/>
+        </linearGradient>
+        <linearGradient id="headGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/>
+        </linearGradient>
+        <linearGradient id="limbGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#a5b4fc"/><stop offset="1" stop-color="#4f46e5"/>
+        </linearGradient>
+      </defs>
+
+      <!-- ground shadow -->
+      <ellipse cx="210" cy="525" rx="110" ry="18" fill="#000" opacity=".4"/>
+
+      <!-- LEFT LEG : SELECTION -->
+      <g id="part-selection" class="part" data-key="selection" tabindex="0" aria-label="Selection - left leg">
+        <rect x="155" y="390" width="44" height="110" rx="16" fill="url(#limbGrad)" stroke="#1e1b4b" stroke-width="3"/>
+        <!-- fork symbol -->
+        <path d="M177 410 v20 M177 430 L165 445 M177 430 L189 445" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="177" y="475" text-anchor="middle" font-size="22">🔀</text>
+        <rect x="143" y="500" width="68" height="18" rx="9" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+        <text class="part-tag" x="177" y="513" text-anchor="middle" fill="#facc15">IF / ELSE</text>
+      </g>
+
+      <!-- RIGHT LEG : ITERATION -->
+      <g id="part-iteration" class="part" data-key="iteration" tabindex="0" aria-label="Iteration - right leg">
+        <rect x="221" y="390" width="44" height="110" rx="16" fill="url(#limbGrad)" stroke="#1e1b4b" stroke-width="3"/>
+        <text x="243" y="440" text-anchor="middle" font-size="28">🔁</text>
+        <text x="243" y="468" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">× N</text>
+        <rect x="209" y="500" width="68" height="18" rx="9" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+        <text class="part-tag" x="243" y="513" text-anchor="middle" fill="#facc15">LOOP</text>
+      </g>
+
+      <!-- LEFT ARM : ARITHMETIC -->
+      <g id="part-arithmetic" class="part" data-key="arithmetic" tabindex="0" aria-label="Arithmetic operations - left arm">
+        <rect x="55" y="250" width="70" height="130" rx="22" fill="url(#limbGrad)" stroke="#1e1b4b" stroke-width="3" transform="rotate(-12 90 315)"/>
+        <g font-size="20" font-weight="800" text-anchor="middle" fill="#fff">
+          <text x="82" y="290">+</text>
+          <text x="102" y="315">−</text>
+          <text x="82" y="340">×</text>
+          <text x="102" y="365">÷</text>
+        </g>
+        <circle cx="90" cy="385" r="18" fill="#facc15" stroke="#1e1b4b" stroke-width="3"/>
+        <text x="90" y="392" text-anchor="middle" font-size="18">🧮</text>
+      </g>
+
+      <!-- RIGHT ARM : RANDOMNESS -->
+      <g id="part-randomness" class="part" data-key="randomness" tabindex="0" aria-label="Randomness - right arm">
+        <rect x="295" y="250" width="70" height="130" rx="22" fill="url(#limbGrad)" stroke="#1e1b4b" stroke-width="3" transform="rotate(12 330 315)"/>
+        <rect x="305" y="285" width="50" height="50" rx="10" fill="#fff" stroke="#1e1b4b" stroke-width="3" transform="rotate(12 330 310)"/>
+        <g fill="#1e1b4b">
+          <circle cx="318" cy="298" r="4"/><circle cx="342" cy="298" r="4"/>
+          <circle cx="330" cy="310" r="4"/><circle cx="318" cy="322" r="4"/><circle cx="342" cy="322" r="4"/>
+        </g>
+        <circle cx="330" cy="378" r="18" fill="#facc15" stroke="#1e1b4b" stroke-width="3"/>
+        <text x="330" y="385" text-anchor="middle" font-size="18">🎲</text>
+      </g>
+
+      <!-- TORSO : E2E PROGRAM -->
+      <g id="part-e2e" class="part" data-key="e2e" tabindex="0" aria-label="E2E program - body">
+        <rect x="130" y="210" width="160" height="185" rx="28" fill="url(#bodyGrad)" stroke="#082f49" stroke-width="4"/>
+        <rect x="148" y="228" width="124" height="54" rx="12" fill="#020617" stroke="#facc15" stroke-width="2.5"/>
+        <text x="210" y="252" text-anchor="middle" fill="#facc15" font-size="16" font-weight="900" letter-spacing="1">E2E PROGRAM</text>
+        <text x="210" y="270" text-anchor="middle" fill="#22d3ee" font-size="11" font-weight="700">INPUT → PROCESS → OUTPUT</text>
+        <!-- chest lights -->
+        <g>
+          <circle cx="170" cy="310" r="10" fill="#22c55e" stroke="#052e16" stroke-width="2"/>
+          <circle cx="210" cy="310" r="10" fill="#facc15" stroke="#713f12" stroke-width="2"/>
+          <circle cx="250" cy="310" r="10" fill="#ef4444" stroke="#450a0a" stroke-width="2"/>
+        </g>
+        <rect x="165" y="330" width="90" height="42" rx="8" fill="#020617" stroke="#38bdf8" stroke-width="2"/>
+        <text x="210" y="348" text-anchor="middle" fill="#fff" font-size="12" font-weight="800" font-family="monospace">run()</text>
+        <text x="210" y="363" text-anchor="middle" fill="#7dd3fc" font-size="10" font-family="monospace">end-to-end ✓</text>
+      </g>
+
+      <!-- HEAD BASE (non-click frame) -->
+      <g>
+        <rect x="60" y="95" width="12" height="40" rx="6" fill="#64748b"/>
+        <circle cx="66" cy="90" r="10" fill="#facc15" stroke="#713f12" stroke-width="2"/>
+        <rect x="348" y="95" width="12" height="40" rx="6" fill="#64748b"/>
+        <circle cx="354" cy="90" r="10" fill="#facc15" stroke="#713f12" stroke-width="2"/>
+        <rect x="125" y="50" width="170" height="165" rx="36" fill="url(#headGrad)" stroke="#082f49" stroke-width="4"/>
+        <rect x="188" y="28" width="44" height="26" rx="8" fill="#475569" stroke="#0f172a" stroke-width="2"/>
+        <circle cx="210" cy="28" r="9" fill="#ef4444" stroke="#450a0a" stroke-width="2"/>
+        <line x1="210" y="37" x2="210" y="50" stroke="#475569" stroke-width="4"/>
+      </g>
+
+      <!-- EYES : INPUT -->
+      <g id="part-input" class="part" data-key="input" tabindex="0" aria-label="Input - eyes sensors">
+        <g>
+          <ellipse cx="172" cy="120" rx="26" ry="30" fill="#020617" stroke="#082f49" stroke-width="3"/>
+          <ellipse cx="248" cy="120" rx="26" ry="30" fill="#020617" stroke="#082f49" stroke-width="3"/>
+          <circle cx="172" cy="122" r="11" fill="#22d3ee"/>
+          <circle cx="248" cy="122" r="11" fill="#22d3ee"/>
+          <circle cx="175" cy="119" r="4" fill="#fff"/>
+          <circle cx="251" cy="119" r="4" fill="#fff"/>
+        </g>
+        <rect x="140" y="155" width="140" height="22" rx="11" fill="#020617" stroke="#22d3ee" stroke-width="2"/>
+        <text class="part-tag" x="210" y="170" text-anchor="middle" fill="#fff">👁 INPUT : sensors</text>
+      </g>
+
+      <!-- MOUTH : OUTPUT -->
+      <g id="part-output" class="part" data-key="output" tabindex="0" aria-label="Output - mouth speaker">
+        <rect x="165" y="182" width="90" height="24" rx="12" fill="#020617" stroke="#f472b6" stroke-width="2.5"/>
+        <g fill="#f472b6">
+          <rect x="180" y="187" width="5" height="14" rx="2.5"/>
+          <rect x="190" y="187" width="5" height="14" rx="2.5"/>
+          <rect x="200" y="187" width="5" height="14" rx="2.5"/>
+          <rect x="210" y="187" width="5" height="14" rx="2.5"/>
+          <rect x="220" y="187" width="5" height="14" rx="2.5"/>
+          <rect x="230" y="187" width="5" height="14" rx="2.5"/>
+        </g>
+        <text class="part-tag" x="315" y="200" fill="#f9a8d4">🔊 OUTPUT →</text>
+      </g>
+
+      <!-- floating labels with leader dots -->
+      <text class="part-label" x="8" y="275">⌨ ARITHMETIC</text>
+      <text class="part-label" x="318" y="275">🎲 RANDOM</text>
+      <text class="part-label" x="8" y="430">🔀 SELECTION</text>
+      <text class="part-label" x="316" y="430">🔁 ITERATION</text>
+      <text class="part-label" x="130" y="30" fill="#facc15">★ E2E BODY ★</text>
+    </svg>
+  </div>
+
+  <div class="controls">
+    <div class="progress-wrap">
+      <div class="progress-top"><span id="count">0 / 7 lit</span><span id="state">😴 dim robot</span></div>
+      <div class="bar"><div id="fill"></div></div>
+    </div>
+    <div class="btns">
+      <button class="primary" id="lightAll">💡 Light all</button>
+      <button id="reset">🌙 Dim all</button>
+    </div>
+    <div id="celebrate">🎉 FULL POWER! All 7 systems lit — E2E robot is awake! 🎉</div>
+  </div>
+</div>
+
+<footer>Single-file mascot • SVG • no libraries • keyboard: Tab + Enter to toggle parts</footer>
+
+<script>
+const keys = ["input","output","arithmetic","randomness","selection","iteration","e2e"];
+const parts = {};
+document.querySelectorAll("g.part").forEach(g => parts[g.dataset.key] = g);
+
+const countEl = document.getElementById("count");
+const stateEl = document.getElementById("state");
+const fillEl = document.getElementById("fill");
+const celebrateEl = document.getElementById("celebrate");
+
+function litKeys(){ return keys.filter(k => parts[k].classList.contains("lit")); }
+
+function update(){
+  const lit = litKeys();
+  countEl.textContent = `${lit.length} / ${keys.length} lit`;
+  fillEl.style.width = (lit.length/keys.length*100) + "%";
+  if(lit.length===0){ stateEl.textContent="😴 dim robot"; celebrateEl.classList.remove("show"); }
+  else if(lit.length===keys.length){ stateEl.textContent="⚡ FULL POWER!"; celebrateEl.classList.add("show"); }
+  else { stateEl.textContent = `🔆 waking… ${lit.length}/${keys.length}`; celebrateEl.classList.remove("show"); }
+}
+
+function toggle(key){
+  parts[key].classList.toggle("lit");
+  update();
+}
+
+keys.forEach(k=>{
+  parts[k].addEventListener("click", ()=>toggle(k));
+  parts[k].addEventListener("keydown", e=>{
+    if(e.key==="Enter"||e.key===" "){ e.preventDefault(); toggle(k); }
+  });
+});
+
+document.getElementById("lightAll").addEventListener("click", ()=>{
+  keys.forEach(k=>parts[k].classList.add("lit"));
+  update();
+});
+document.getElementById("reset").addEventListener("click", ()=>{
+  keys.forEach(k=>parts[k].classList.remove("lit"));
+  update();
+});
+update();
+</script>
+</body>
+</html>
