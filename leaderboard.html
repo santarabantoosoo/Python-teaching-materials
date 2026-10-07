@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coddy Tech Leaderboard 🏆</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: #f1f5f9; margin: 0; padding: 24px; }
+  h1 { text-align: center; margin: 0 0 4px; }
+  p.sub { text-align: center; color: #94a3b8; margin-top: 0; }
+  .meta { text-align: center; color: #64748b; font-size: 13px; margin-bottom: 12px; }
+  .awards { max-width: 900px; margin: 0 auto 20px; background: #1e293b; border: 1px solid #facc15; border-radius: 12px; padding: 12px 16px; text-align: center; font-size: 16px; }
+  .board { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; max-width: 900px; margin: 0 auto 24px; }
+  .card { background: #1e293b; border-radius: 16px; padding: 20px; text-align: center; border: 2px solid transparent; }
+  .card.rank-1 { border-color: #facc15; }
+  .card.rank-2 { border-color: #cbd5e1; }
+  .card.rank-3 { border-color: #d97706; }
+  .rank { font-size: 40px; }
+  .name { font-size: 24px; font-weight: bold; margin: 8px 0; text-transform: capitalize; }
+  .big { font-size: 28px; font-weight: bold; color: #4ade80; }
+  .big span { font-size: 14px; color: #94a3b8; font-weight: normal; }
+  .gain { font-size: 15px; font-weight: bold; margin-top: 4px; }
+  .gain.up { color: #4ade80; }
+  .gain.flat { color: #64748b; font-weight: normal; }
+  .badge { display: inline-block; font-size: 13px; font-weight: bold; border-radius: 20px; padding: 3px 12px; margin: 6px 2px 0; }
+  .badge.gold { background: #facc15; color: #422006; }
+  .badge.fire { background: #f97316; color: #fff; }
+  .bar { background: #334155; border-radius: 8px; height: 10px; margin: 12px 0 6px; overflow: hidden; }
+  .fill { background: linear-gradient(90deg, #22c55e, #4ade80); height: 100%; }
+  .updated { font-size: 12px; color: #64748b; }
+  table { width: 100%; max-width: 900px; margin: 0 auto; border-collapse: collapse; background: #1e293b; border-radius: 12px; overflow: hidden; }
+  th, td { padding: 12px; text-align: left; border-bottom: 1px solid #334155; }
+  th { background: #0ea5e9; color: #fff; }
+  .foot { max-width: 900px; margin: 24px auto 0; text-align: center; color: #64748b; font-size: 13px; }
+  .banner { max-width: 900px; margin: 0 auto 16px; background: #14532d; color: #bbf7d0; padding: 12px 16px; border-radius: 12px; text-align: center; display: none; }
+  details.edit { max-width: 700px; margin: 24px auto 0; background: #1e293b; border-radius: 16px; padding: 16px 20px; }
+  details.edit summary { cursor: pointer; font-weight: bold; font-size: 17px; list-style: none; text-align: center; color: #38bdf8; }
+  details.edit summary::-webkit-details-marker { display: none; }
+  .student-block { border: 1px solid #334155; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+  .student-block h2 { margin: 0 0 12px; text-transform: capitalize; }
+  label { display: block; font-size: 14px; color: #94a3b8; margin: 10px 0 4px; }
+  input { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: #fff; font-size: 16px; }
+  button { width: 100%; padding: 14px; border: 0; border-radius: 12px; background: #0ea5e9; color: #fff; font-size: 18px; font-weight: bold; cursor: pointer; }
+  button:hover { background: #0284c7; }
+  .hint { font-size: 13px; color: #64748b; text-align: center; margin: 4px 0 12px; }
+</style>
+</head>
+<body>
+  <h1>🏆 Coddy Tech Leaderboard</h1>
+  <p class="sub">Mousa • Albaraa • Osama — 37 lessons</p>
+  <div class="meta" id="meta"></div>
+  <div class="awards" id="awards"></div>
+  <div class="banner" id="banner">✅ Progress saved!</div>
+  <div class="board" id="board"></div>
+  <table>
+    <tr><th>#</th><th>Student</th><th>Lesson 📖</th><th>Since last ⏱️</th></tr>
+    <tbody id="tableBody"></tbody>
+  </table>
+  <div class="foot">Keep going! 🚀 Every lesson counts.</div>
+
+  <details class="edit" id="editBox">
+    <summary>✏️ Teacher: edit progress</summary>
+    <p class="hint">Just enter each student's <b>current lesson number (0–37)</b>, then Save. Gains vs last session are calculated automatically.</p>
+    <form id="editForm">
+      <div class="student-block"><h2>👦 Mousa</h2>
+        <label>Current lesson (0–37)</label>
+        <input type="number" min="0" max="37" id="mousa__lesson" required>
+      </div>
+      <div class="student-block"><h2>👦 Albaraa</h2>
+        <label>Current lesson (0–37)</label>
+        <input type="number" min="0" max="37" id="albaraa__lesson" required>
+      </div>
+      <div class="student-block"><h2>👦 Osama</h2>
+        <label>Current lesson (0–37)</label>
+        <input type="number" min="0" max="37" id="osama__lesson" required>
+      </div>
+      <div style="height:12px"></div>
+      <button type="submit">💾 Save all</button>
+    </form>
+  </details>
+
+<script>
+var TOTAL_LESSONS = 37;
+var STORE_KEY = "coddyLeaderboard.v3";
+var STUDENTS = ["mousa", "albaraa", "osama"];
+
+// Starting values (used only on first ever open in a browser).
+// students = current lesson number per student (0 = not started).
+// last = snapshot of the previous save, used to auto-calculate gains.
+var SEED = {
+  students: { mousa: 3, albaraa: 0, osama: 0 },
+  last: null,
+  updated: "2026-10-07 10:10"
+};
+
+function esc(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+function valid(data) {
+  if (!data || typeof data !== "object") return false;
+  if (!data.students || typeof data.students !== "object") return false;
+  return STUDENTS.every(function (s) {
+    var v = data.students[s];
+    return typeof v === "number" && v >= 0 && v <= TOTAL_LESSONS;
+  });
+}
+
+// Load the saved values. Falls back to the starting values below.
+function load() {
+  try {
+    var raw = localStorage.getItem(STORE_KEY);
+    if (raw) {
+      var data = JSON.parse(raw);
+      if (valid(data)) return data;
+    }
+  } catch (e) {}
+  return JSON.parse(JSON.stringify(SEED));
+}
+
+// Save the values (kept by the browser, loaded automatically next open).
+function persist(data) {
+  localStorage.setItem(STORE_KEY, JSON.stringify(data));
+}
+
+function nowStamp() {
+  var d = new Date();
+  function p(n) { return (n < 10 ? "0" : "") + n; }
+  return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()) +
+         " " + p(d.getHours()) + ":" + p(d.getMinutes());
+}
+
+function gainOf(data, name) {
+  if (!data.last) return null;
+  return data.students[name] - (data.last[name] || 0);
+}
+
+function render() {
+  var data = load();
+  var ordered = STUDENTS.slice().sort(function (a, b) {
+    return (data.students[b] - data.students[a]) || (a < b ? -1 : 1);
+  });
+  var bestOverall = Math.max.apply(null, STUDENTS.map(function (s) { return data.students[s]; }));
+  var bestGain = null;
+  if (data.last) {
+    bestGain = Math.max.apply(null, STUDENTS.map(function (s) { return gainOf(data, s); }));
+  }
+
+  var cards = "", rows = "";
+  ordered.forEach(function (name, i) {
+    var cur = data.students[name];
+    var gain = gainOf(data, name);
+    var pct = Math.round(cur / TOTAL_LESSONS * 100);
+    var medals = ["🥇", "🥈", "🥉"];
+    var medal = medals[i] || ("#" + (i + 1));
+
+    var badges = "";
+    if (cur === bestOverall && cur > 0) badges += '<span class="badge gold">👑 Best overall</span>';
+    if (gain !== null && gain > 0 && gain === bestGain) badges += '<span class="badge fire">🔥 Best session +' + gain + '</span>';
+
+    var gainLine;
+    if (gain === null) {
+      gainLine = '<div class="gain flat">first record — session gains start next save</div>';
+    } else if (gain > 0) {
+      gainLine = '<div class="gain up">+' + gain + ' since last session</div>';
+    } else {
+      gainLine = '<div class="gain flat">no new lessons since last session</div>';
+    }
+
+    cards += '<div class="card rank-' + (i + 1) + '"><div class="rank">' + medal + '</div>' +
+      '<div class="name">' + esc(cap(name)) + '</div>' +
+      '<div class="big">Lesson ' + cur + ' <span>/ ' + TOTAL_LESSONS + '</span></div>' +
+      gainLine + '<div>' + badges + '</div>' +
+      '<div class="bar"><div class="fill" style="width:' + pct + '%"></div></div>' +
+      '<div class="updated">Updated: ' + esc(data.updated) + '</div></div>';
+
+    var gainCell = gain === null ? "—" : (gain > 0 ? "+" + gain : "0");
+    rows += "<tr><td>" + (i + 1) + "</td><td>" + esc(cap(name)) + "</td>" +
+      "<td>" + cur + " / " + TOTAL_LESSONS + "</td><td>" + gainCell + "</td></tr>";
+  });
+  document.getElementById("board").innerHTML = cards;
+  document.getElementById("tableBody").innerHTML = rows;
+
+  var top = ordered[0];
+  var awards;
+  if (data.last && bestGain > 0) {
+    var hot = STUDENTS.filter(function (s) { return gainOf(data, s) === bestGain; })
+                      .map(function (s) { return esc(cap(s)); }).join(", ");
+    awards = "👑 Best overall: <b>" + esc(cap(top)) + "</b> (Lesson " + data.students[top] + ")" +
+             " &nbsp;•&nbsp; 🔥 Best session: <b>" + hot + "</b> (+" + bestGain + ")";
+  } else {
+    awards = "👑 Best overall: <b>" + esc(cap(top)) + "</b> (Lesson " + data.students[top] + ")" +
+             " &nbsp;•&nbsp; 🔥 Best session decided after your next save";
+  }
+  document.getElementById("awards").innerHTML = awards;
+  document.getElementById("meta").textContent = "Last updated: " + data.updated;
+
+  STUDENTS.forEach(function (s) {
+    document.getElementById(s + "__lesson").value = data.students[s];
+  });
+}
+
+function flash(msg) {
+  var banner = document.getElementById("banner");
+  banner.textContent = msg;
+  banner.style.display = "block";
+  setTimeout(function () { banner.style.display = "none"; }, 3000);
+}
+
+document.getElementById("editForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var prev = load().students;
+  var next = {};
+  STUDENTS.forEach(function (s) {
+    var v = parseInt(document.getElementById(s + "__lesson").value, 10);
+    if (isNaN(v)) v = 0;
+    next[s] = Math.min(TOTAL_LESSONS, Math.max(0, v));
+  });
+  var data = { students: next, last: prev, updated: nowStamp() };
+  persist(data);
+  render();
+  flash("✅ Progress saved — gains calculated!");
+});
+
+render();
+</script>
+</body>
+</html>
