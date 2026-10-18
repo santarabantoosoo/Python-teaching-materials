@@ -56,7 +56,6 @@ def _(mo):
     chk_quotes_var = mo.ui.checkbox(label="Used quotes around a variable name")
     chk_quotes_str = mo.ui.checkbox(label="Forgot quotes around a word like `\"BFG\"`")
     
-    # vstack MUST be the last expression to display
     mo.vstack([
         chk_spelling, chk_colon, chk_indent, chk_indent_wrong,
         chk_equal, chk_quotes_var, chk_quotes_str
@@ -64,66 +63,27 @@ def _(mo):
     return (chk_spelling, chk_colon, chk_indent, chk_indent_wrong, chk_equal, chk_quotes_var, chk_quotes_str)
 
 
-@app.cell
-def _(mo):
-    # Code editor - skeleton for students to fill in (VISIBLE)
-    code_editor = mo.ui.code_editor(
-        value='# Step 1: Ask for the trip\n# print("Best trip ever?")\n# trip = input()\n\n# Step 2: Check if trip is "Aqua park"\n# if trip == "Aqua park":\n\n# Step 3: Print special message\n#     print(trip + " is my favourite too!")\n\n# Step 4: Else print generic message\n# else:\n#     print(trip + " is not too bad")',
-        label="Write your code here (uncomment and complete each step)",
-        language="python",
-    )
-    code_editor
-    return (code_editor,)
-
-
 @app.cell(hide_code=True)
 def _(mo):
-    # Run button - must be last expression to display
-    run_button = mo.ui.run_button(label="▶ Run code")
-    run_button
-    return (run_button,)
+    mo.md(r"""
+    ### Code skeleton (copy into your Python file):
 
-
-@app.cell(hide_code=True)
-def _(run_button, code_editor, mo):
-    # Execute the student's code when button is clicked
-    if run_button.value:
-        mo.output.append(mo.md("### Output"))
-        try:
-            namespace = {}
-            exec(code_editor.value, namespace)
-        except Exception as e:
-            mo.output.append(mo.md(f"**Error:** `{type(e).__name__}: {e}`"))
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md("""
-    ---
-    ### ✅ Solution (click to reveal)
-    """)
-    return
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    # Collapsible solution - accordion must be last expression
-    solution = mo.ui.accordion(
-        {
-            "Show solution": mo.md("""
     ```python
+    # Step 1: Ask for the trip
     print("Best trip ever?")
     trip = input()
+
+    # Step 2: Check if trip is "Aqua park"
     if trip == "Aqua park":
+
+        # Step 3: Print special message
         print(trip + " is my favourite too!")
+
+    # Step 4: Else print generic message
     else:
         print(trip + " is not too bad")
     ```
     """)
-        }
-    )
-    solution
     return
 
 
