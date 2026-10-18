@@ -38,6 +38,62 @@ https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/mai
 
 ---
 
+## L6 - Count & Times Tables (A1 & A2 Worksheets)
+
+### A1: Count (5 tasks)
+
+#### Task 1: Trace it
+**Raw URL:**
+```
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a1_task1-trace.py
+```
+
+#### Task 2: Repeat with while
+**Raw URL:**
+```
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a1_task2-while-repeat.py
+```
+
+#### Task 3: Countdown
+**Raw URL:**
+```
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a1_task3-countdown.py
+```
+
+#### Task 4: Skip counting upwards
+**Raw URL:**
+```
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a1_task4-skip-count.py
+```
+
+#### Task 5: The element of time (sleep)
+**Raw URL:**
+```
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a1_task5-sleep.py
+```
+
+### A2: Times tables practice (3 tasks)
+
+#### Task 1: A practice question (while True + counter)
+**Raw URL:**
+```
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a2_task1-practice-question.py
+```
+
+#### Task 2: Measure performance (correct counter)
+**Raw URL:**
+```
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a2_task2-measure-performance.py
+```
+
+#### Task 3: Keep going + your limit
+**Raw URL:**
+```
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a2_task3-keep-going.py
+```
+
+---
+
 ## How to use
 
 ### Option 2: Paste in marimo.new
@@ -55,6 +111,16 @@ uv run marimo run task3-eligible-vote.py
 # L5
 uv run marimo run l5/task1-people-in-space.py
 uv run marimo run l5/task2-temperature.py
+
+# L6
+uv run marimo run l6/a1_task1-trace.py
+uv run marimo run l6/a1_task2-while-repeat.py
+uv run marimo run l6/a1_task3-countdown.py
+uv run marimo run l6/a1_task4-skip-count.py
+uv run marimo run l6/a1_task5-sleep.py
+uv run marimo run l6/a2_task1-practice-question.py
+uv run marimo run l6/a2_task2-measure-performance.py
+uv run marimo run l6/a2_task3-keep-going.py
 ```
 
 ---
@@ -63,7 +129,7 @@ uv run marimo run l5/task2-temperature.py
 
 All notebooks use **Template B (static)**:
 - `hide_code=True` on all cells
-- Code skeleton in **markdown code block** at Step 1 **only if the original HTML has one** (L4 Task 1 & 2 have snippets; L4 Task 3 does not; L5 Task 1 & 2 have snippets)
+- Code skeleton in **markdown code block** at Step 1 **only if the original HTML has one** (L4 Task 1 & 2 have snippets; L4 Task 3 does not; L5 Task 1 & 2 have snippets; L6 all tasks have snippets)
 - Interactive checkboxes for error reflection
 - No run button, no code editor, no solution accordion
 - Designed for "copy to your editor, run locally" workflow
@@ -80,5 +146,14 @@ Python-teaching-materials/
 ├── l5/
 │   ├── task1-people-in-space.py      # L5 Task 1
 │   └── task2-temperature.py          # L5 Task 2
+├── l6/
+│   ├── a1_task1-trace.py             # L6 A1 Task 1
+│   ├── a1_task2-while-repeat.py      # L6 A1 Task 2
+│   ├── a1_task3-countdown.py         # L6 A1 Task 3
+│   ├── a1_task4-skip-count.py        # L6 A1 Task 4
+│   ├── a1_task5-sleep.py             # L6 A1 Task 5
+│   ├── a2_task1-practice-question.py # L6 A2 Task 1
+│   ├── a2_task2-measure-performance.py # L6 A2 Task 2
+│   └── a2_task3-keep-going.py        # L6 A2 Task 3
 └── MARIMO_URLS.md
 ```
