@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.17.4"
+__generated_with = "0.25.1"
 app = marimo.App()
 
 
@@ -57,7 +57,7 @@ def _(mo):
     chk_colon = mo.ui.checkbox(label="Forgot the colon `:` after `if` or `else`")
     chk_indent = mo.ui.checkbox(label="Forgot to indent inside `if` / `else`")
     chk_indent_wrong = mo.ui.checkbox(label="Indented `if` or `else` by mistake")
-    chk_equal = mo.ui.checkbox(label="Used `=` instead of `==`")
+    chk_equal = mo.ui.checkbox(label="Used `=` instead of `==")
     chk_quotes_var = mo.ui.checkbox(label="Used quotes around a variable name")
     chk_quotes_str = mo.ui.checkbox(label="Forgot quotes around a word like `\"BFG\"`")
     
@@ -71,11 +71,10 @@ def _(mo):
 @app.cell
 def _(mo):
     # Code editor for the student to write their solution
-    code_editor = mo.ui.text_area(
+    code_editor = mo.ui.code_editor(
         value='print("Best trip ever?")\ntrip = input()\nif trip == "Aqua park":\n    print(trip, "is my favourite too!")\nelse:\n    print(trip, "is not too bad")',
         label="Your solution (edit and click Run)",
-        rows=12,
-        code=True,
+        language="python",
     )
     code_editor
     return (code_editor,)
