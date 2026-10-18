@@ -26,19 +26,26 @@ def _(mo):
     | `Best trip ever?` | `The castle` | `The castle is not too bad` |
     | `Best trip ever?` | `Aqua park` | `Aqua park is my favourite too!` |
 
-    ### Steps to complete:
+    ### Step 1: Type this code
 
-    **Step 1:** Write code that asks `Best trip ever?` and stores the answer in a variable called `trip`
+    ```python
+    print("Best trip ever?")
+    trip = input()
+    if               :
+        print(trip, "is not too bad")
+    else:
+        print(trip, "is my favourite too!")
+    ```
 
-    **Step 2:** Write an `if` statement that checks if `trip` equals `"Aqua park"` (use `==`)
+    ### Step 2
+    Complete line 3 using `==` to check equality.
 
-    **Step 3:** Inside the `if`, print: `trip + " is my favourite too!"`
+    ### Step 3
+    Indent the lines that belong inside `if` / `else`.
 
-    **Step 4:** Add an `else` that prints: `trip + " is not too bad"`
-
-    **Step 5:** Run it. Test twice:
-    - Once with `The castle`
-    - Once with `Aqua park`
+    ### Step 4
+    Run it. Test twice.
+    - Once with `The castle`. Once with `Aqua park`.
 
     **Red error (خطأ)? Fix it (صلّحه).** Tick what you found:
     """)
@@ -61,30 +68,6 @@ def _(mo):
         chk_equal, chk_quotes_var, chk_quotes_str
     ], gap=4)
     return (chk_spelling, chk_colon, chk_indent, chk_indent_wrong, chk_equal, chk_quotes_var, chk_quotes_str)
-
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""
-    ### Code skeleton (copy into your Python file):
-
-    ```python
-    # Step 1: Ask for the trip
-    print("Best trip ever?")
-    trip = input()
-
-    # Step 2: Check if trip is "Aqua park"
-    if trip == "Aqua park":
-
-        # Step 3: Print special message
-        print(trip + " is my favourite too!")
-
-    # Step 4: Else print generic message
-    else:
-        print(trip + " is not too bad")
-    ```
-    """)
-    return
 
 
 @app.cell(hide_code=True)
