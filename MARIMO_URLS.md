@@ -5,19 +5,19 @@
 ### Task 1: Trip Critic
 **Raw URL:**
 ```
-https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/task1-trip-critic.py
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l4/task1-trip-critic.py
 ```
 
 ### Task 2: Favourite Number
 **Raw URL:**
 ```
-https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/task2-favourite-number.py
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l4/task2-favourite-number.py
 ```
 
 ### Task 3: Eligible to Vote
 **Raw URL:**
 ```
-https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/task3-eligible-vote.py
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l4/task3-eligible-vote.py
 ```
 
 ---
@@ -104,9 +104,9 @@ https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/mai
 ### Option 3: Run locally
 ```bash
 # L4
-uv run marimo run task1-trip-critic.py
-uv run marimo run task2-favourite-number.py
-uv run marimo run task3-eligible-vote.py
+uv run marimo run l4/task1-trip-critic.py
+uv run marimo run l4/task2-favourite-number.py
+uv run marimo run l4/task3-eligible-vote.py
 
 # L5
 uv run marimo run l5/task1-people-in-space.py
@@ -140,20 +140,21 @@ All notebooks use **Template B (static)**:
 
 ```
 Python-teaching-materials/
-├── task1-trip-critic.py              # L4 Task 1
-├── task2-favourite-number.py         # L4 Task 2
-├── task3-eligible-vote.py            # L4 Task 3
+├── l4/
+│   ├── task1-trip-critic.py              # L4 Task 1
+│   ├── task2-favourite-number.py         # L4 Task 2
+│   └── task3-eligible-vote.py            # L4 Task 3
 ├── l5/
-│   ├── task1-people-in-space.py      # L5 Task 1
-│   └── task2-temperature.py          # L5 Task 2
+│   ├── task1-people-in-space.py          # L5 Task 1
+│   └── task2-temperature.py              # L5 Task 2
 ├── l6/
-│   ├── a1_task1-trace.py             # L6 A1 Task 1
-│   ├── a1_task2-while-repeat.py      # L6 A1 Task 2
-│   ├── a1_task3-countdown.py         # L6 A1 Task 3
-│   ├── a1_task4-skip-count.py        # L6 A1 Task 4
-│   ├── a1_task5-sleep.py             # L6 A1 Task 5
-│   ├── a2_task1-practice-question.py # L6 A2 Task 1
-│   ├── a2_task2-measure-performance.py # L6 A2 Task 2
-│   └── a2_task3-keep-going.py        # L6 A2 Task 3
+│   ├── a1_task1-trace.py                 # L6 A1 Task 1
+│   ├── a1_task2-while-repeat.py          # L6 A1 Task 2
+│   ├── a1_task3-countdown.py             # L6 A1 Task 3
+│   ├── a1_task4-skip-count.py            # L6 A1 Task 4
+│   ├── a1_task5-sleep.py                 # L6 A1 Task 5
+│   ├── a2_task1-practice-question.py     # L6 A2 Task 1
+│   ├── a2_task2-measure-performance.py   # L6 A2 Task 2
+│   └── a2_task3-keep-going.py            # L6 A2 Task 3
 └── MARIMO_URLS.md
 ```
