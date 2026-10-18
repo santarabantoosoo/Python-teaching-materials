@@ -26,22 +26,17 @@ def _(mo):
     | `Best trip ever?` | `The castle` | `The castle is not too bad` |
     | `Best trip ever?` | `Aqua park` | `Aqua park is my favourite too!` |
 
-    ### Step 1: Type this code
+    ### Steps to complete:
 
-    ```python
-    print("Best trip ever?")
-    trip = input()
-    if               :
-        print(trip, "is not too bad")
-    else:
-        print(trip, "is my favourite too!")
-    ```
+    **Step 1:** Write code that asks `Best trip ever?` and stores the answer in a variable called `trip`
 
-    ### Step 2: Complete line 3 using `==` to check equality
+    **Step 2:** Write an `if` statement that checks if `trip` equals `"Aqua park"` (use `==`)
 
-    ### Step 3: Indent the lines that belong inside `if` / `else`
+    **Step 3:** Inside the `if`, print: `trip + " is my favourite too!"`
 
-    ### Step 4: Run it. Test twice.
+    **Step 4:** Add an `else` that prints: `trip + " is not too bad"`
+
+    **Step 5:** Run it. Test twice:
     - Once with `The castle`
     - Once with `Aqua park`
 
@@ -52,7 +47,7 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    # Interactive checklist for common errors - using individual checkboxes
+    # Interactive checklist for common errors
     chk_spelling = mo.ui.checkbox(label="Misspelt `if` or `else`")
     chk_colon = mo.ui.checkbox(label="Forgot the colon `:` after `if` or `else`")
     chk_indent = mo.ui.checkbox(label="Forgot to indent inside `if` / `else`")
@@ -70,10 +65,10 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    # Code editor for the student to write their solution
+    # Code editor - skeleton for students to fill in
     code_editor = mo.ui.code_editor(
-        value='print("Best trip ever?")\ntrip = input()\nif trip == "Aqua park":\n    print(trip, "is my favourite too!")\nelse:\n    print(trip, "is not too bad")',
-        label="Your solution (edit and click Run)",
+        value='# Step 1: Ask for the trip\n# print("Best trip ever?")\n# trip = input()\n\n# Step 2: Check if trip is "Aqua park"\n# if trip == "Aqua park":\n\n# Step 3: Print special message\n#     print(trip + " is my favourite too!")\n\n# Step 4: Else print generic message\n# else:\n#     print(trip + " is not too bad")',
+        label="Write your code here (uncomment and complete each step)",
         language="python",
     )
     code_editor
@@ -99,6 +94,36 @@ def _(run_button, code_editor, mo):
             exec(code_editor.value, namespace)
         except Exception as e:
             mo.output.append(mo.md(f"**Error:** `{type(e).__name__}: {e}`"))
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md("""
+    ---
+    ### ✅ Solution (click to reveal)
+    """)
+    return
+
+
+@app.cell
+def _(mo):
+    # Collapsible solution
+    solution = mo.ui.accordion(
+        {
+            "Show solution": mo.md("""
+    ```python
+    print("Best trip ever?")
+    trip = input()
+    if trip == "Aqua park":
+        print(trip + " is my favourite too!")
+    else:
+        print(trip + " is not too bad")
+    ```
+    """)
+        }
+    )
+    solution
     return
 
 
