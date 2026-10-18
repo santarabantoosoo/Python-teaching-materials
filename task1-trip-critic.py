@@ -32,9 +32,9 @@ def _(mo):
     print("Best trip ever?")
     trip = input()
     if               :
-        print(trip, "is not too bad")
+    print(trip, "is not too bad")
     else:
-        print(trip, "is my favourite too!")
+    print(trip, "is my favourite too!")
     ```
 
     ### Step 2
