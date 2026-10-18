@@ -4,13 +4,13 @@ __generated_with = "0.25.1"
 app = marimo.App()
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _():
     import marimo as mo
     return (mo,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
     # Practise using selection
@@ -45,7 +45,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     # Interactive checklist for common errors
     chk_spelling = mo.ui.checkbox(label="Misspelt `if` or `else`")
@@ -65,7 +65,7 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    # Code editor - skeleton for students to fill in
+    # Code editor - skeleton for students to fill in (THIS ONE SHOWS CODE)
     code_editor = mo.ui.code_editor(
         value='# Step 1: Ask for the trip\n# print("Best trip ever?")\n# trip = input()\n\n# Step 2: Check if trip is "Aqua park"\n# if trip == "Aqua park":\n\n# Step 3: Print special message\n#     print(trip + " is my favourite too!")\n\n# Step 4: Else print generic message\n# else:\n#     print(trip + " is not too bad")',
         label="Write your code here (uncomment and complete each step)",
@@ -75,7 +75,7 @@ def _(mo):
     return (code_editor,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     # Run button
     run_button = mo.ui.run_button(label="▶ Run code")
@@ -83,7 +83,7 @@ def _(mo):
     return (run_button,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(run_button, code_editor, mo):
     # Execute the student's code when button is clicked
     if run_button.value:
@@ -97,7 +97,7 @@ def _(run_button, code_editor, mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md("""
     ---
@@ -106,7 +106,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     # Collapsible solution
     solution = mo.ui.accordion(
@@ -127,7 +127,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md("""
     ---
