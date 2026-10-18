@@ -30,19 +30,6 @@ def _(mo):
 
     ### Step 1: Write your program
 
-    **Type this code:**
-
-    ```python
-    print("How old are you?")
-    age = int(input())
-    if               :
-        print("You are eligible to vote")
-    else:
-        print("You are not eligible to vote")
-        years = 18 - age
-        print(years, "more years to go")
-    ```
-
     Run it. Test twice: with `21` and with `14`.
 
     ### Checklist
