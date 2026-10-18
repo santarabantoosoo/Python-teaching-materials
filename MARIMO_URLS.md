@@ -34,11 +34,6 @@ uv run marimo run task2-favourite-number.py
 uv run marimo run task3-eligible-vote.py
 ```
 
-### Option 4: Edit locally
-```bash
-uv run marimo edit task1-trip-critic.py
-```
-
 ---
 
 ## Notebook Structure (all three)
