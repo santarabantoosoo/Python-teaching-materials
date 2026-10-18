@@ -52,47 +52,46 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    # Interactive checklist for common errors
-    checklist = mo.ui.checkbox_group(
-        options=[
-            "Misspelt `if` or `else`",
-            "Forgot the colon `:` after `if` or `else`",
-            "Forgot to indent inside `if` / `else`",
-            "Indented `if` or `else` by mistake",
-            "Used `=` instead of `==`",
-            "Used quotes around a variable name",
-            "Forgot quotes around a word like `\"BFG\"`",
-        ],
-        value=[],
-        label="Error checklist"
-    )
-    checklist
-    return (checklist,)
+    # Interactive checklist for common errors - using individual checkboxes
+    chk_spelling = mo.ui.checkbox(label="Misspelt `if` or `else`")
+    chk_colon = mo.ui.checkbox(label="Forgot the colon `:` after `if` or `else`")
+    chk_indent = mo.ui.checkbox(label="Forgot to indent inside `if` / `else`")
+    chk_indent_wrong = mo.ui.checkbox(label="Indented `if` or `else` by mistake")
+    chk_equal = mo.ui.checkbox(label="Used `=` instead of `==`")
+    chk_quotes_var = mo.ui.checkbox(label="Used quotes around a variable name")
+    chk_quotes_str = mo.ui.checkbox(label="Forgot quotes around a word like `\"BFG\"`")
+    
+    mo.vstack([
+        chk_spelling, chk_colon, chk_indent, chk_indent_wrong,
+        chk_equal, chk_quotes_var, chk_quotes_str
+    ], gap=4)
+    return (chk_spelling, chk_colon, chk_indent, chk_indent_wrong, chk_equal, chk_quotes_var, chk_quotes_str)
 
 
 @app.cell
 def _(mo):
     # Code editor for the student to write their solution
-    code_editor = mo.ui.code(
+    code_editor = mo.ui.text_area(
         value='print("Best trip ever?")\ntrip = input()\nif trip == "Aqua park":\n    print(trip, "is my favourite too!")\nelse:\n    print(trip, "is not too bad")',
-        language="python",
-        label="Your solution"
+        label="Your solution (edit and click Run)",
+        rows=12,
+        code=True,
     )
     code_editor
     return (code_editor,)
 
 
 @app.cell
-def _(code_editor, mo):
-    # Run button and output
-    run_button = mo.ui.run_button(label="Run code")
+def _(mo):
+    # Run button
+    run_button = mo.ui.run_button(label="▶ Run code")
     run_button
     return (run_button,)
 
 
 @app.cell
 def _(run_button, code_editor, mo):
-    # Execute the student's code
+    # Execute the student's code when button is clicked
     if run_button.value:
         mo.output.append(mo.md("### Output"))
         try:
