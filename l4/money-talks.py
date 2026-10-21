@@ -96,7 +96,7 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    mo.image("/marimo/public/operators.png")
+    mo.image("l4/operators.png")  # run marimo from the repo root so this path resolves
     return
 
 

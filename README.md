@@ -7,6 +7,7 @@ A repo for supplementaries (eg. deployed HTML apps) that can be used in class.
 - Task 1: Trip critic [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l4/task1-trip-critic.py)
 - Task 2: Favourite number [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l4/task2-favourite-number.py)
 - Task 3: Eligible to vote [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l4/task3-eligible-vote.py)
+- Money talks [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l4/money-talks.py)
 
 ### L5 — People in space & temperature
 - Task 1: People in space [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l5/task1-people-in-space.py)

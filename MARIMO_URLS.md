@@ -26,6 +26,14 @@ https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/mai
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l4/task3-eligible-vote.py
 ```
 
+### Money talks
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l4/money-talks.py)
+
+**Raw URL:**
+```
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l4/money-talks.py
+```
+
 ---
 
 ## L5 - People in Space & Temperature (A2 Worksheet)
