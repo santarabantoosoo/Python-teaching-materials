@@ -3,18 +3,24 @@
 ## L4 - Selection Basics
 
 ### Task 1: Trip Critic
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l4/task1-trip-critic.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l4/task1-trip-critic.py
 ```
 
 ### Task 2: Favourite Number
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l4/task2-favourite-number.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l4/task2-favourite-number.py
 ```
 
 ### Task 3: Eligible to Vote
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l4/task3-eligible-vote.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l4/task3-eligible-vote.py
@@ -25,12 +31,16 @@ https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/mai
 ## L5 - People in Space & Temperature (A2 Worksheet)
 
 ### Task 1: People in space
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l5/task1-people-in-space.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l5/task1-people-in-space.py
 ```
 
 ### Task 2: Temperature
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l5/task2-temperature.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l5/task2-temperature.py
@@ -43,30 +53,40 @@ https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/mai
 ### A1: Count (5 tasks)
 
 #### Task 1: Trace it
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l6/a1_task1-trace.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a1_task1-trace.py
 ```
 
 #### Task 2: Repeat with while
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l6/a1_task2-while-repeat.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a1_task2-while-repeat.py
 ```
 
 #### Task 3: Countdown
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l6/a1_task3-countdown.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a1_task3-countdown.py
 ```
 
 #### Task 4: Skip counting upwards
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l6/a1_task4-skip-count.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a1_task4-skip-count.py
 ```
 
 #### Task 5: The element of time (sleep)
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l6/a1_task5-sleep.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a1_task5-sleep.py
@@ -75,18 +95,24 @@ https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/mai
 ### A2: Times tables practice (3 tasks)
 
 #### Task 1: A practice question (while True + counter)
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l6/a2_task1-practice-question.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a2_task1-practice-question.py
 ```
 
 #### Task 2: Measure performance (correct counter)
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l6/a2_task2-measure-performance.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a2_task2-measure-performance.py
 ```
 
 #### Task 3: Keep going + your limit
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/l6/a2_task3-keep-going.py)
+
 **Raw URL:**
 ```
 https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/l6/a2_task3-keep-going.py
@@ -94,7 +120,22 @@ https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/mai
 
 ---
 
+## AI Challenge
+
+### AI Challenge Notebook
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/ai-challenge/ai_challenge.py)
+
+**Raw URL:**
+```
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/ai-challenge/ai_challenge.py
+```
+
+---
+
 ## How to use
+
+### Option 1: Open in molab
+Click any **Open in molab** badge above to run the notebook in the cloud — no install needed.
 
 ### Option 2: Paste in marimo.new
 1. Go to https://marimo.new
