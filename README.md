@@ -28,3 +28,7 @@ A repo for supplementaries (eg. deployed HTML apps) that can be used in class.
 - AI challenge [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/ai-challenge/ai_challenge.py)
 
 See [MARIMO_URLS.md](MARIMO_URLS.md) for raw URLs and local run instructions.
+
+## Deployed lesson pages
+
+- Lesson 1 — Selection (L4): https://santarabantoosoo.github.io/Python-teaching-materials/l4/lesson1.html (marimo static export)
