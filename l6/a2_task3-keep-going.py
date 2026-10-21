@@ -12,25 +12,32 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "# Times tables practice\n\n"
-        "## Task 3. Explorer task. Keep going + your limit\n\n"
-        "### Part A: keep asking until 3 correct\n"
-        "Check `correct` in the `while` line.\n\n"
-        "Example output:\n"
-        "```\n"
-        "You answered 3 out of 5 correctly\n"
-        "```\n\n"
-        "Type your while line for Part A:\n"
-        "(Write in your editor)\n\n"
-        "### Part B: let the user choose the limit\n"
-        "Before the game, ask for total questions.\n"
-        "Or ask for total correct answers needed.\n\n"
-        "Type your program for Part B:\n"
-        "(Write in your editor)\n\n"
-        "### Checklist\n"
-        "Test and tick:"
-    )
+    mo.md("""
+    # Times tables practice
+
+    ## Task 3. Explorer task. Keep going + your limit
+
+    ### Part A: keep asking until 3 correct
+    Check `correct` in the `while` line.
+
+    Example output:
+    ```
+    You answered 3 out of 5 correctly
+    ```
+
+    Type your while line for Part A:
+    (Write in your editor)
+
+    ### Part B: let the user choose the limit
+    Before the game, ask for total questions.
+    Or ask for total correct answers needed.
+
+    Type your program for Part B:
+    (Write in your editor)
+
+    ### Checklist
+    Test and tick:
+    """)
     return
 
 
@@ -48,10 +55,10 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "---\n"
-        "**Good luck! \U0001f389**"
-    )
+    mo.md("""
+    ---
+    **Good luck! 🎉**
+    """)
     return
 
 

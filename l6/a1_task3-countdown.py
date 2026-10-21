@@ -12,30 +12,39 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "# Count\n\n"
-        "## Task 3. Countdown\n\n"
-        "### Step 1\n"
-        "Change one line. Start from 10, not from 3.\n\n"
-        "```python\n"
-        "count = 10\n"
-        "while count >= 1:\n"
-        "    print(count)\n"
-        "    count = count - 1\n"
-        "```\n\n"
-        "### Step 2\n"
-        "Add one line at the end:\n\n"
-        "```python\n"
-        "print(\"Lift off!\")\n"
-        "```\n\n"
-        "It runs after the loop. Do not indent it.\n\n"
-        "Type your countdown program:\n"
-        "(Write in your editor)\n\n"
-        "Run it. What did you see? Write here:\n"
-        "(Write output in your editor)\n\n"
-        "### Checklist\n"
-        "Test and tick:"
-    )
+    mo.md("""
+    # Count
+
+    ## Task 3. Countdown
+
+    ### Step 1
+    Change one line. Start from 10, not from 3.
+
+    ```python
+    count = 10
+    while count >= 1:
+        print(count)
+        count = count - 1
+    ```
+
+    ### Step 2
+    Add one line at the end:
+
+    ```python
+    print("Lift off!")
+    ```
+
+    It runs after the loop. Do not indent it.
+
+    Type your countdown program:
+    (Write in your editor)
+
+    Run it. What did you see? Write here:
+    (Write output in your editor)
+
+    ### Checklist
+    Test and tick:
+    """)
     return
 
 
@@ -52,10 +61,10 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "---\n"
-        "**Good luck! \U0001f389**"
-    )
+    mo.md("""
+    ---
+    **Good luck! 🎉**
+    """)
     return
 
 

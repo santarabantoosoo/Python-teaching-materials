@@ -12,32 +12,41 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "# Count\n\n"
-        "## Task 2. Repeat with while\n\n"
-        "Same actions again and again. Use `while` to repeat.\n\n"
-        "### Step 1\n"
-        "Type this start. It will not run yet.\n\n"
-        "```python\n"
-        "count = 3\n"
-        "while              :\n"
-        "    print(count)\n"
-        "    count = count - 1\n"
-        "```\n\n"
-        "### Step 2\n"
-        "Pick the condition. Last value printed must be 1.\n\n"
-        "- `while count > 1:`\n"
-        "- `while count >= 1:`\n"
-        "- `while count < 1:`\n"
-        "- `while count == 1:`\n\n"
-        "Why did you pick it? Write here:\n"
-        "(Write in your editor)\n\n"
-        "### Step 3\n"
-        "Type your full while program:\n"
-        "(Write in your editor)\n\n"
-        "### Checklist\n"
-        "Red error (خطأ)? Fix it (صلّحه). Tick what you found:"
-    )
+    mo.md("""
+    # Count
+
+    ## Task 2. Repeat with while
+
+    Same actions again and again. Use `while` to repeat.
+
+    ### Step 1
+    Type this start. It will not run yet.
+
+    ```python
+    count = 3
+    while              :
+        print(count)
+        count = count - 1
+    ```
+
+    ### Step 2
+    Pick the condition. Last value printed must be 1.
+
+    - `while count > 1:`
+    - `while count >= 1:`
+    - `while count < 1:`
+    - `while count == 1:`
+
+    Why did you pick it? Write here:
+    (Write in your editor)
+
+    ### Step 3
+    Type your full while program:
+    (Write in your editor)
+
+    ### Checklist
+    Red error (خطأ)? Fix it (صلّحه). Tick what you found:
+    """)
     return
 
 
@@ -54,10 +63,10 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "---\n"
-        "**Good luck! \U0001f389**"
-    )
+    mo.md("""
+    ---
+    **Good luck! 🎉**
+    """)
     return
 
 

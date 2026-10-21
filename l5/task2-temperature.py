@@ -12,47 +12,57 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "# Explorer task. Temperature\n\n"
-        "Read the start:\n\n"
-        "```python\n"
-        "from weather import temperature\n"
-        "print(\"Where do you live?\")\n"
-        "location = input()\n"
-        "temp = temperature(location)\n"
-        "```\n\n"
-        "The temperature comes from the internet. It is not always the same.\n\n"
-        "### \U0001f527 Workaround: `weather` module not installed?\n"
-        "Copy this at the **top of your file** to make it run locally:\n\n"
-        "```python\n"
-        "# --- MOCK weather module (paste at top) ---\n"
-        "def temperature(location):\n"
-        '    """Return a fake temperature for testing."""\n'
-        "    location = location.lower()\n"
-        "    if \"nuuk\" in location or \"greenland\" in location:\n"
-        "        return -5.0\n"
-        "    if \"cairo\" in location or \"egypt\" in location:\n"
-        "        return 32.0\n"
-        "    if \"london\" in location or \"uk\" in location:\n"
-        "        return 12.0\n"
-        "    if \"dubai\" in location or \"uae\" in location:\n"
-        "        return 38.0\n"
-        "    return 20.0  # default\n"
-        "# -------------------------------------------\n"
-        "```\n\n"
-        "### Step 1\n"
-        "Show a message for each temperature range.\n\n"
-        "**Example:**\n"
-        "| You type | Program shows |\n"
-        "|---|---|\n"
-        "| `Nuuk` | `Current temperature in Nuuk is -5.0` + `It's freezing cold` |\n\n"
-        "**Type your program:**\n"
-        "(Write it in your editor, including the mock at the top)\n\n"
-        "**Run it. What did you see? Write here:**\n"
-        "(Write output in your editor)\n\n"
-        "### Checklist\n"
-        "Test and tick:"
-    )
+    mo.md("""
+    # Explorer task. Temperature
+
+    Read the start:
+
+    ```python
+    from weather import temperature
+    print("Where do you live?")
+    location = input()
+    temp = temperature(location)
+    ```
+
+    The temperature comes from the internet. It is not always the same.
+
+    ### 🔧 Workaround: `weather` module not installed?
+    Copy this at the **top of your file** to make it run locally:
+
+    ```python
+    # --- MOCK weather module (paste at top) ---
+    def temperature(location):
+        "\""Return a fake temperature for testing."\""
+        location = location.lower()
+        if "nuuk" in location or "greenland" in location:
+            return -5.0
+        if "cairo" in location or "egypt" in location:
+            return 32.0
+        if "london" in location or "uk" in location:
+            return 12.0
+        if "dubai" in location or "uae" in location:
+            return 38.0
+        return 20.0  # default
+    # -------------------------------------------
+    ```
+
+    ### Step 1
+    Show a message for each temperature range.
+
+    **Example:**
+    | You type | Program shows |
+    |---|---|
+    | `Nuuk` | `Current temperature in Nuuk is -5.0` + `It's freezing cold` |
+
+    **Type your program:**
+    (Write it in your editor, including the mock at the top)
+
+    **Run it. What did you see? Write here:**
+    (Write output in your editor)
+
+    ### Checklist
+    Test and tick:
+    """)
     return
 
 
@@ -76,10 +86,10 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "---\n"
-        "**Good luck! \U0001f389**"
-    )
+    mo.md("""
+    ---
+    **Good luck! 🎉**
+    """)
     return
 
 

@@ -12,25 +12,32 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "# Count\n\n"
-        "## Task 4. Skip counting upwards\n\n"
-        "Start from 1.\n"
-        "Skip count in 3s: 1, 4, 7, 10, 13, 16, 19.\n"
-        "Stop after 19.\n\n"
-        "### Rule\n"
-        "Change 3 lines:\n"
-        "1. Where counting starts.\n"
-        "2. How `count` changes each time.\n"
-        "3. The `while` condition.\n\n"
-        "If it never stops, press Stop or Ctrl+C.\n\n"
-        "Type your skip-counting program:\n"
-        "(Write in your editor)\n\n"
-        "Run it. What did you see? Write here:\n"
-        "(Write output in your editor)\n\n"
-        "### Checklist\n"
-        "Test and tick:"
-    )
+    mo.md("""
+    # Count
+
+    ## Task 4. Skip counting upwards
+
+    Start from 1.
+    Skip count in 3s: 1, 4, 7, 10, 13, 16, 19.
+    Stop after 19.
+
+    ### Rule
+    Change 3 lines:
+    1. Where counting starts.
+    2. How `count` changes each time.
+    3. The `while` condition.
+
+    If it never stops, press Stop or Ctrl+C.
+
+    Type your skip-counting program:
+    (Write in your editor)
+
+    Run it. What did you see? Write here:
+    (Write output in your editor)
+
+    ### Checklist
+    Test and tick:
+    """)
     return
 
 
@@ -48,10 +55,10 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "---\n"
-        "**Good luck! \U0001f389**"
-    )
+    mo.md("""
+    ---
+    **Good luck! 🎉**
+    """)
     return
 
 

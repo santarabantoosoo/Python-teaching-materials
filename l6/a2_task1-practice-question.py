@@ -12,59 +12,74 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "# Times tables practice\n\n"
-        "## Worked example. Countdown\n"
-        "```python\n"
-        "count = 10\n"
-        "while count >= 1:\n"
-        "    print(count)\n"
-        "    count = count - 1\n"
-        "print(\"Lift off\")\n"
-        "```\n\n"
-        "`count` starts at 10. Goes down by 1 each time. Loop continues while `count` is at least 1.\n\n"
-        "## Worked example. Ten sixes\n"
-        "```python\n"
-        "from random import randint\n"
-        "rolls = 0\n"
-        "sixes = 0\n"
-        "while sixes < 10:\n"
-        "    dice = randint(1,6)\n"
-        "    print(dice)\n"
-        "    if dice == 6:\n"
-        "        sixes = sixes + 1\n"
-        "    rolls = rolls + 1\n"
-        "print(\"Ten sixes in\", rolls, \"dice rolls\")\n"
-        "```\n\n"
-        "Two counters: `rolls` and `sixes`.\n\n"
-        "---\n\n"
-        "## Task 1. A practice question\n\n"
-        "### Step 1\n"
-        "Put lines 2 to 11 inside a loop:\n"
-        "```python\n"
-        "while True:\n"
-        "```\n"
-        "`True` means repeat forever. Indent all lines inside.\n\n"
-        "Type your while True program (first lines):\n"
-        "(Write in your editor)\n\n"
-        "### Step 2\n"
-        "Run it. It never stops. Press Stop or Ctrl+C to end it.\n\n"
-        "What did you see? Write here:\n"
-        "(Write output in your editor)\n\n"
-        "### Step 3\n"
-        "Add a counter: `questions`. Give it a start value. Add 1 each time. Show it inside the loop:\n"
-        "```python\n"
-        "    print(\"Question\", questions)\n"
-        "```\n\n"
-        "Type the two lines you added for questions:\n"
-        "(Write in your editor)\n\n"
-        "### Step 4\n"
-        "Ask exactly 3 questions. Change `True` to a check on `questions`. Continue only if 3 or fewer asked.\n\n"
-        "Type your final while line + full program:\n"
-        "(Write in your editor)\n\n"
-        "### Checklist\n"
-        "Red error (خطأ)? Fix it (صلّحه). Tick what you found:"
-    )
+    mo.md("""
+    # Times tables practice
+
+    ## Worked example. Countdown
+    ```python
+    count = 10
+    while count >= 1:
+        print(count)
+        count = count - 1
+    print("Lift off")
+    ```
+
+    `count` starts at 10. Goes down by 1 each time. Loop continues while `count` is at least 1.
+
+    ## Worked example. Ten sixes
+    ```python
+    from random import randint
+    rolls = 0
+    sixes = 0
+    while sixes < 10:
+        dice = randint(1,6)
+        print(dice)
+        if dice == 6:
+            sixes = sixes + 1
+        rolls = rolls + 1
+    print("Ten sixes in", rolls, "dice rolls")
+    ```
+
+    Two counters: `rolls` and `sixes`.
+
+    ---
+
+    ## Task 1. A practice question
+
+    ### Step 1
+    Put lines 2 to 11 inside a loop:
+    ```python
+    while True:
+    ```
+    `True` means repeat forever. Indent all lines inside.
+
+    Type your while True program (first lines):
+    (Write in your editor)
+
+    ### Step 2
+    Run it. It never stops. Press Stop or Ctrl+C to end it.
+
+    What did you see? Write here:
+    (Write output in your editor)
+
+    ### Step 3
+    Add a counter: `questions`. Give it a start value. Add 1 each time. Show it inside the loop:
+    ```python
+        print("Question", questions)
+    ```
+
+    Type the two lines you added for questions:
+    (Write in your editor)
+
+    ### Step 4
+    Ask exactly 3 questions. Change `True` to a check on `questions`. Continue only if 3 or fewer asked.
+
+    Type your final while line + full program:
+    (Write in your editor)
+
+    ### Checklist
+    Red error (خطأ)? Fix it (صلّحه). Tick what you found:
+    """)
     return
 
 
@@ -84,10 +99,10 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "---\n"
-        "**Good luck! \U0001f389**"
-    )
+    mo.md("""
+    ---
+    **Good luck! 🎉**
+    """)
     return
 
 

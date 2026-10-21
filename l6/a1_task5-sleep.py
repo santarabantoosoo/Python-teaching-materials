@@ -12,23 +12,29 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "# Count\n\n"
-        "## Task 5. Explorer task. The element of time\n\n"
-        "Add a one-second pause between numbers.\n\n"
-        "First line:\n"
-        "```python\n"
-        "from time import sleep\n"
-        "```\n\n"
-        "Inside the loop:\n"
-        "```python\n"
-        "    sleep(1)\n"
-        "```\n\n"
-        "Type your program with sleep:\n"
-        "(Write in your editor)\n\n"
-        "### Checklist\n"
-        "Test and tick:"
-    )
+    mo.md("""
+    # Count
+
+    ## Task 5. Explorer task. The element of time
+
+    Add a one-second pause between numbers.
+
+    First line:
+    ```python
+    from time import sleep
+    ```
+
+    Inside the loop:
+    ```python
+        sleep(1)
+    ```
+
+    Type your program with sleep:
+    (Write in your editor)
+
+    ### Checklist
+    Test and tick:
+    """)
     return
 
 
@@ -45,10 +51,10 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "---\n"
-        "**Good luck! \U0001f389**"
-    )
+    mo.md("""
+    ---
+    **Good luck! 🎉**
+    """)
     return
 
 

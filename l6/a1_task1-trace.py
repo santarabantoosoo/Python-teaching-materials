@@ -12,47 +12,60 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "# Count\n\n"
-        "## Worked example\n"
-        "What will this program show?\n\n"
-        "```python\n"
-        "count = 3\n"
-        "print(count)\n"
-        "count = count - 1\n"
-        "print(count)\n"
-        "```\n\n"
-        "Use a trace table. Track the line, the value, and the Output (الناتج).\n\n"
-        "| line | count | output |\n"
-        "|---|---|---|\n"
-        "| 1 | 3 | |\n"
-        "| 2 | | 3 |\n"
-        "| 3 | 2 | |\n"
-        "| 4 | | 2 |\n\n"
-        "Answer: it shows 3 and 2.\n\n"
-        "---\n\n"
-        "## Task 1. Trace it\n\n"
-        "Read the longer program.\n\n"
-        "```python\n"
-        "count = 3\n"
-        "print(count)\n"
-        "count = count - 1\n"
-        "print(count)\n"
-        "count = count - 1\n"
-        "print(count)\n"
-        "count = count - 1\n"
-        "```\n\n"
-        "First 4 rows are done. Complete the rest:\n\n"
-        "| Line | count | output |\n"
-        "|---|---|---|\n"
-        "| 5: count = ? | | |\n"
-        "| 6: output = ? | | |\n"
-        "| 7: count = ? | | |\n\n"
-        "What will the program show? Write here:\n"
-        "(Write in your editor)\n\n"
-        "### Checklist\n"
-        "Test and tick:"
-    )
+    mo.md("""
+    # Count
+
+    ## Worked example
+    What will this program show?
+
+    ```python
+    count = 3
+    print(count)
+    count = count - 1
+    print(count)
+    ```
+
+    Use a trace table. Track the line, the value, and the Output (الناتج).
+
+    | line | count | output |
+    |---|---|---|
+    | 1 | 3 | |
+    | 2 | | 3 |
+    | 3 | 2 | |
+    | 4 | | 2 |
+
+    Answer: it shows 3 and 2.
+
+    ---
+
+    ## Task 1. Trace it
+
+    Read the longer program.
+
+    ```python
+    count = 3
+    print(count)
+    count = count - 1
+    print(count)
+    count = count - 1
+    print(count)
+    count = count - 1
+    ```
+
+    First 4 rows are done. Complete the rest:
+
+    | Line | count | output |
+    |---|---|---|
+    | 5: count = ? | | |
+    | 6: output = ? | | |
+    | 7: count = ? | | |
+
+    What will the program show? Write here:
+    (Write in your editor)
+
+    ### Checklist
+    Test and tick:
+    """)
     return
 
 
@@ -69,10 +82,10 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "---\n"
-        "**Good luck! \U0001f389**"
-    )
+    mo.md("""
+    ---
+    **Good luck! 🎉**
+    """)
     return
 
 

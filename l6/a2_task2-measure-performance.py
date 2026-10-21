@@ -12,21 +12,26 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "# Times tables practice\n\n"
-        "## Task 2. Explorer task. Measure performance\n\n"
-        "Add a counter: `correct`.\n"
-        "Give it a start value.\n"
-        "Add 1 each time the answer is right.\n\n"
-        "At the end show:\n"
-        "```python\n"
-        "print(\"You answered\", correct, \"out of\", questions, \"correctly\")\n"
-        "```\n\n"
-        "Type your program with correct counter:\n"
-        "(Write in your editor)\n\n"
-        "### Checklist\n"
-        "Test and tick:"
-    )
+    mo.md("""
+    # Times tables practice
+
+    ## Task 2. Explorer task. Measure performance
+
+    Add a counter: `correct`.
+    Give it a start value.
+    Add 1 each time the answer is right.
+
+    At the end show:
+    ```python
+    print("You answered", correct, "out of", questions, "correctly")
+    ```
+
+    Type your program with correct counter:
+    (Write in your editor)
+
+    ### Checklist
+    Test and tick:
+    """)
     return
 
 
@@ -43,10 +48,10 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        "---\n"
-        "**Good luck! \U0001f389**"
-    )
+    mo.md("""
+    ---
+    **Good luck! 🎉**
+    """)
     return
 
 
