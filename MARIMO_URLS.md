@@ -140,6 +140,18 @@ https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/mai
 
 ---
 
+## Marimo UI Widgets Reference
+
+### UI Widgets Gallery
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/marimo_ui/ui_widgets.py)
+
+**Raw URL:**
+```
+https://raw.githubusercontent.com/santarabantoosoo/Python-teaching-materials/main/marimo_ui/ui_widgets.py
+```
+
+---
+
 ## How to use
 
 ### Option 1: Open in molab

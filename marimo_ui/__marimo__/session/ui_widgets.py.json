@@ -1,0 +1,614 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.25.2",
+    "script_metadata_hash": "e51fd409474f1761bb2531eef1cb1126"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "dbc92e7d7f894bdaba49a81e3a71f67e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"marimo-ui-widgets-reference\">Marimo UI Widgets Reference</h1>\n<h2 id=\"1-text-code-inputs\">1. Text &amp; Code Inputs</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "4a76758b4afffa8d754b485c43523ec0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='vblA-0' random-id='265ab08f-1ded-1b13-71e0-58ca5b0d89d4'><marimo-text data-initial-value='&quot;&quot;' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eText Input&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-placeholder='&quot;Type your name...&quot;' data-kind='&quot;text&quot;' data-full-width='false' data-disabled='false' data-debounce='true'></marimo-text></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "ba97978a8f6ef7421beaac09310a9929",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='bkHC-0' random-id='ed3fb521-bc44-408a-3e50-a1b124088a11'><marimo-text-area data-initial-value='&quot;&quot;' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eText Area&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-placeholder='&quot;Write a longer message here...&quot;' data-disabled='false' data-debounce='true' data-full-width='false' data-rows='4'></marimo-text-area></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "caa78eeda2a52674a3b1c7fbf2915016",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='lEQa-0' random-id='12a1e3cc-688c-b9aa-982f-5274247092b5'><marimo-code-editor data-initial-value='&quot;def greet(name):&#92;n    return f&#92;&quot;Hello, {name}!&#92;&quot;&quot;' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eCode Editor&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-language='&quot;python&quot;' data-placeholder='&quot;&quot;' data-disabled='false' data-show-copy-button='true' data-debounce='false'></marimo-code-editor></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "bebf713e2b787ea15b49c3bc0a4e18f3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"2-number-slider-inputs\">2. Number &amp; Slider Inputs</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "f30255d69e26125f8d918f0f8e8738cf",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='Xref-0' random-id='e256adbc-0224-a8ee-c6b3-d49f7450e214'><marimo-number data-initial-value='10' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eNumber Input&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='0' data-stop='100' data-step='1' data-debounce='false' data-full-width='false' data-disabled='false'></marimo-number></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "86d6677e360a3b13fa29d77dc14fb183",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='SFPL-0' random-id='9d8d307c-2b18-8940-b436-4de83fa4074a'><marimo-slider data-initial-value='50' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eSlider&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='0' data-stop='100' data-step='5' data-steps='[]' data-debounce='false' data-disabled='false' data-orientation='&quot;horizontal&quot;' data-show-value='true' data-include-input='false' data-full-width='false'></marimo-slider></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "057a9868d9cf8715efbf850613d54800",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='BYtC-0' random-id='2c4dc1d3-2000-0447-05f0-e56758162c6b'><marimo-range-slider data-initial-value='[20,80]' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eRange Slider&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='0' data-stop='100' data-step='5' data-steps='[]' data-debounce='false' data-orientation='&quot;horizontal&quot;' data-show-value='true' data-full-width='false' data-disabled='false'></marimo-range-slider></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "69d57f24688e5d9a1905e3b4608a5f5b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='RGSE-0' random-id='4d6e22dd-3ec3-68da-57e3-a00fe2d0a6a5'><marimo-matrix data-initial-value='[[1,0,0],[0,1,0],[0,0,1]]' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eMatrix Input&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-min-value='[[-10,-10,-10],[-10,-10,-10],[-10,-10,-10]]' data-max-value='[[10,10,10],[10,10,10],[10,10,10]]' data-step='[[1,1,1],[1,1,1],[1,1,1]]' data-precision='0' data-symmetric='false' data-debounce='false' data-scientific='false' data-disabled='[[false,false,false],[false,false,false],[false,false,false]]'></marimo-matrix></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "d1f728287b7403e50fc8f903c4be5190",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"3-boolean-selection-inputs\">3. Boolean &amp; Selection Inputs</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "54f5ee9f04034eee5f64a63134d7e551",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='emfo-0' random-id='e7379f65-8c7e-c54a-f785-f8df49593306'><marimo-checkbox data-initial-value='true' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eCheckbox&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-disabled='false'></marimo-checkbox></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "3d596f3e675a1ec35c1d616068b3f71d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='Hstk-0' random-id='6bc5bf9f-81ae-d3d2-287c-11b32e4bb550'><marimo-switch data-initial-value='false' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eSwitch&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-disabled='false'></marimo-switch></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "4daa150bbb7afff4c3e47d182e564607",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='nWHF-0' random-id='9160d33f-0e74-58cd-b9f5-34bb3441e5ae'><marimo-radio data-initial-value='&quot;Python&quot;' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eRadio Buttons&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-options='[&quot;Python&quot;,&quot;JavaScript&quot;,&quot;Rust&quot;]' data-inline='false' data-disabled='false'></marimo-radio></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "f7d46dbe581c2c9f359e9050131a5450",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='iLit-0' random-id='ceaf82ed-7056-71e8-b040-c03c3699615a'><marimo-dropdown data-initial-value='[&quot;Apple&quot;]' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eDropdown&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-options='[&quot;Apple&quot;,&quot;Banana&quot;,&quot;Cherry&quot;,&quot;Mango&quot;]' data-allow-select-none='false' data-searchable='true' data-full-width='false' data-disabled='false'></marimo-dropdown></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "8499549c3691f8e4bdde5fcb6e8da557",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='ZHCJ-0' random-id='14c9427a-ce3f-1776-e46b-73c09dfa57f0'><marimo-multiselect data-initial-value='[&quot;Red&quot;,&quot;Blue&quot;]' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eMultiselect&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-options='[&quot;Red&quot;,&quot;Green&quot;,&quot;Blue&quot;,&quot;Yellow&quot;]' data-full-width='false' data-disabled='false'></marimo-multiselect></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "a2b5e5e7aba8c5a9811bfb4fca2b5ba0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"4-buttons-triggers\">4. Buttons &amp; Triggers</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "2fbd72e55e513b3318be6c8b095abf23",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='qnkX-0' random-id='9720bd48-28d4-17cd-4182-7ce06b95f17c'><marimo-button data-initial-value='0' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eClick Me&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-kind='&quot;success&quot;' data-disabled='false' data-full-width='false'></marimo-button></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "d7f2249c24a524db1f94b521d3252abb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='TqIu-0' random-id='6e7b6c74-29fe-646b-e4e9-9f1f8f295f66'><marimo-button data-initial-value='0' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eRun Action&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-kind='&quot;warn&quot;' data-disabled='false' data-full-width='false'></marimo-button></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "cb39647b4520e013f3c349529606e3d4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='Vxnm-0' random-id='53e24465-c35e-11ef-6807-42a74ec0d3c0'><marimo-refresh data-initial-value='&quot;&quot;' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eAuto Refresh&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-options='[&quot;1s&quot;,&quot;5s&quot;,&quot;10s&quot;,&quot;30s&quot;]'></marimo-refresh></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "17d8fb82520e972a9d08315a894565d4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"5-date-time-inputs\">5. Date &amp; Time Inputs</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "d14138eb4a93379a2fc352dd32423be5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='ulZA-0' random-id='274ab2f2-8c0c-827c-4439-483a25b9c2e8'><marimo-date data-initial-value='&quot;2026-01-15&quot;' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eDate Picker&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='&quot;0001-01-01&quot;' data-stop='&quot;9999-12-31&quot;' data-full-width='false' data-disabled='false'></marimo-date></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ecfG",
+      "code_hash": "6f1f1110a11cbbdcfc1f112538472137",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='ecfG-0' random-id='1bd39292-4f35-508c-358f-25ed7c5fd5ce'><marimo-datetime data-initial-value='&quot;2026-01-15T09:30:00&quot;' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eDatetime Picker&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='&quot;0001-01-01T00:00:00&quot;' data-stop='&quot;9999-12-31T23:59:59&quot;' data-precision='&quot;minute&quot;' data-full-width='false' data-disabled='false'></marimo-datetime></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Pvdt",
+      "code_hash": "19cdf6d60ac08b55fbc11094263521aa",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='Pvdt-0' random-id='078ccbd9-b214-dad6-4fb1-6235a5b77f6e'><marimo-date-range data-initial-value='[&quot;2026-01-01&quot;,&quot;2026-01-31&quot;]' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eDate Range Picker&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='&quot;0001-01-01&quot;' data-stop='&quot;9999-12-31&quot;' data-full-width='false' data-disabled='false'></marimo-date-range></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZBYS",
+      "code_hash": "2edbfe60d24dbed34716878371c485d3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"6-file-media-inputs\">6. File &amp; Media Inputs</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "aLJB",
+      "code_hash": "f8e854724c94327b805d4e1f2ce4d9ac",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='aLJB-0' random-id='c1405cd3-aa82-aae4-ef2d-8a4917419f6d'><marimo-file data-initial-value='[]' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eUpload a File&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-filetypes='[&quot;.csv&quot;,&quot;.txt&quot;,&quot;.json&quot;]' data-multiple='false' data-kind='&quot;area&quot;' data-max_size='100000000'></marimo-file></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nHfw",
+      "code_hash": "e318d180fcaf6f1a29998159ad8577fa",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='nHfw-0' random-id='249d3dea-42b2-4f71-04f9-a269e0080445'><marimo-file-browser data-initial-value='[]' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eFile Browser&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-initial-path='&quot;/home/hamza/opencode_trial/python/Python-teaching-materials/marimo_ui&quot;' data-selection-mode='&quot;file&quot;' data-filetypes='[]' data-multiple='true' data-restrict-navigation='true'></marimo-file-browser></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "[W 261024 23:05:50 file_browser:158] file_browser has no explicit initial_path; navigation is limited to the working directory (/home/hamza/opencode_trial/python/Python-teaching-materials/marimo_ui). Pass initial_path to declare which directory can be browsed.\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "xXTn",
+      "code_hash": "43f0c11d77d7c0be336ee47340c5f5b4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='xXTn-0' random-id='4f6926c7-756a-e792-abcc-dce5e5783fc3'><marimo-microphone data-initial-value='&quot;&quot;' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eRecord Audio&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;'></marimo-microphone></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "AjVT",
+      "code_hash": "e388cd808b429d9521e65812adb5d017",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"7-tables-dataframes\">7. Tables &amp; DataFrames</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "pHFh",
+      "code_hash": "c760e31d8c93c8af3231ab8476ed8bc4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='pHFh-0' random-id='e8e3f589-010a-ebb4-11ca-74393bbd6a21'><marimo-table data-initial-value='[]' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eInteractive Table&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-data='&quot;[{&#92;&quot;student&#92;&quot;:&#92;&quot;Alice&#92;&quot;,&#92;&quot;score&#92;&quot;:95,&#92;&quot;passed&#92;&quot;:true},{&#92;&quot;student&#92;&quot;:&#92;&quot;Bob&#92;&quot;,&#92;&quot;score&#92;&quot;:82,&#92;&quot;passed&#92;&quot;:true},{&#92;&quot;student&#92;&quot;:&#92;&quot;Charlie&#92;&quot;,&#92;&quot;score&#92;&quot;:68,&#92;&quot;passed&#92;&quot;:false}]&quot;' data-total-rows='3' data-total-columns='3' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='false' data-page-size='10' data-selection='&quot;multi&quot;' data-show-filters='false' data-show-download='true' data-show-search='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-hidden-columns='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "NCOB",
+      "code_hash": "1e4014688d94660da0e4fa9ee095de96",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='NCOB-0' random-id='8152f949-8072-1983-4aa1-6337da4bda3d'><marimo-data-editor data-initial-value='{&quot;edits&quot;:[]}' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eEditable Data Table&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-data='&quot;data:text/csv;base64,aXRlbSxwcmljZSxxdHkKTm90ZWJvb2ssNC41LDIKUGVuY2lsLDEuMCw1Cg==&quot;' data-column-names='[&quot;item&quot;,&quot;price&quot;,&quot;qty&quot;]' data-editable-columns='&quot;all&quot;' data-column-sizing-mode='&quot;auto&quot;'></marimo-data-editor></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "aqbW",
+      "code_hash": "e50fc7884295d15b308b8605bfedee8b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='aqbW-0' random-id='2bfc6967-c160-6072-3024-0564de77e3cf'><marimo-dataframe data-initial-value='{&quot;transforms&quot;:[]}' data-label='null' data-columns='[[&quot;city&quot;,&quot;string&quot;,&quot;str&quot;],[&quot;temp_c&quot;,&quot;integer&quot;,&quot;int64&quot;],[&quot;humidity&quot;,&quot;integer&quot;,&quot;int64&quot;]]' data-dataframe-name='&quot;sample_df&quot;' data-total='4' data-page-size='5' data-show-download='true' data-download-json-ensure-ascii='true' data-lazy='false'></marimo-dataframe></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TRpd",
+      "code_hash": "44009e2d3c328875008f8454d3d93c9a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='TRpd-0' random-id='1cec0fb9-997b-fce2-eac6-49a0b89ab700'><marimo-data-explorer data-initial-value='{&quot;mark&quot;:&quot;?&quot;,&quot;encoding&quot;:{},&quot;config&quot;:{}}' data-label='null' data-data='&quot;data:text/csv;base64,Y2l0eSx0ZW1wX2MsaHVtaWRpdHkKQ2Fpcm8sMjgsNDAKTG9uZG9uLDE2LDc1ClRva3lvLDIyLDY1ClBhcmlzLDE5LDcwCg==&quot;'></marimo-data-explorer></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TXez",
+      "code_hash": "ca7297c435ce7d45dcea8f910eb4034c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"8-interactive-charts\">8. Interactive Charts</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "dNNg",
+      "code_hash": "5ce2bd23099def0ad4b3691bb4185bae",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='dNNg-0' random-id='08d0ac59-231b-aae8-32e8-a196dac9a31b'><marimo-vega data-initial-value='{}' data-label='null' data-spec='{&quot;config&quot;:{&quot;view&quot;:{&quot;continuousWidth&quot;:300,&quot;continuousHeight&quot;:300}},&quot;data&quot;:{&quot;url&quot;:&quot;data:application/vnd.apache.arrow.file;base64,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&quot;,&quot;format&quot;:{&quot;type&quot;:&quot;arrow&quot;}},&quot;mark&quot;:{&quot;type&quot;:&quot;bar&quot;},&quot;encoding&quot;:{&quot;color&quot;:{&quot;field&quot;:&quot;city&quot;,&quot;type&quot;:&quot;nominal&quot;},&quot;x&quot;:{&quot;field&quot;:&quot;city&quot;,&quot;type&quot;:&quot;nominal&quot;},&quot;y&quot;:{&quot;field&quot;:&quot;temp_c&quot;,&quot;type&quot;:&quot;quantitative&quot;}},&quot;&#36;schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v6.4.1.json&quot;}' data-chart-selection='true' data-field-selection='true' data-embed-options='{}'></marimo-vega></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "yCnT",
+      "code_hash": "0c5cb25a6ee88694e652919af94bcde5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='yCnT-0' random-id='ab33e9e4-9c9b-1803-f9a1-75b11c562a55'><marimo-plotly data-initial-value='{}' data-label='null' data-figure='{&quot;data&quot;:[{&quot;hovertemplate&quot;:&quot;temp_c=%{x}&#92;u003cbr&#92;u003ehumidity=%{y}&#92;u003cbr&#92;u003ecity=%{text}&#92;u003cextra&#92;u003e&#92;u003c/extra&#92;u003e&quot;,&quot;legendgroup&quot;:&quot;&quot;,&quot;marker&quot;:{&quot;color&quot;:&quot;#636efa&quot;,&quot;symbol&quot;:&quot;circle&quot;},&quot;mode&quot;:&quot;markers+text&quot;,&quot;name&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;v&quot;,&quot;showlegend&quot;:false,&quot;text&quot;:[&quot;Cairo&quot;,&quot;London&quot;,&quot;Tokyo&quot;,&quot;Paris&quot;],&quot;x&quot;:{&quot;dtype&quot;:&quot;i1&quot;,&quot;bdata&quot;:&quot;HBAWEw==&quot;},&quot;xaxis&quot;:&quot;x&quot;,&quot;y&quot;:{&quot;dtype&quot;:&quot;i1&quot;,&quot;bdata&quot;:&quot;KEtBRg==&quot;},&quot;yaxis&quot;:&quot;y&quot;,&quot;type&quot;:&quot;scatter&quot;}],&quot;layout&quot;:{&quot;template&quot;:{&quot;data&quot;:{&quot;histogram2dcontour&quot;:[{&quot;type&quot;:&quot;histogram2dcontour&quot;,&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;colorscale&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]]}],&quot;choropleth&quot;:[{&quot;type&quot;:&quot;choropleth&quot;,&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}}],&quot;histogram2d&quot;:[{&quot;type&quot;:&quot;histogram2d&quot;,&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;colorscale&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]]}],&quot;heatmap&quot;:[{&quot;type&quot;:&quot;heatmap&quot;,&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;colorscale&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]]}],&quot;contourcarpet&quot;:[{&quot;type&quot;:&quot;contourcarpet&quot;,&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}}],&quot;contour&quot;:[{&quot;type&quot;:&quot;contour&quot;,&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;colorscale&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]]}],&quot;surface&quot;:[{&quot;type&quot;:&quot;surface&quot;,&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;},&quot;colorscale&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]]}],&quot;mesh3d&quot;:[{&quot;type&quot;:&quot;mesh3d&quot;,&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}}],&quot;scatter&quot;:[{&quot;fillpattern&quot;:{&quot;fillmode&quot;:&quot;overlay&quot;,&quot;size&quot;:10,&quot;solidity&quot;:0.2},&quot;type&quot;:&quot;scatter&quot;}],&quot;parcoords&quot;:[{&quot;type&quot;:&quot;parcoords&quot;,&quot;line&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}}}],&quot;scatterpolargl&quot;:[{&quot;type&quot;:&quot;scatterpolargl&quot;,&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}}}],&quot;bar&quot;:[{&quot;error_x&quot;:{&quot;color&quot;:&quot;#2a3f5f&quot;},&quot;error_y&quot;:{&quot;color&quot;:&quot;#2a3f5f&quot;},&quot;marker&quot;:{&quot;line&quot;:{&quot;color&quot;:&quot;#E5ECF6&quot;,&quot;width&quot;:0.5},&quot;pattern&quot;:{&quot;fillmode&quot;:&quot;overlay&quot;,&quot;size&quot;:10,&quot;solidity&quot;:0.2}},&quot;type&quot;:&quot;bar&quot;}],&quot;scattergeo&quot;:[{&quot;type&quot;:&quot;scattergeo&quot;,&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}}}],&quot;scatterpolar&quot;:[{&quot;type&quot;:&quot;scatterpolar&quot;,&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}}}],&quot;histogram&quot;:[{&quot;marker&quot;:{&quot;pattern&quot;:{&quot;fillmode&quot;:&quot;overlay&quot;,&quot;size&quot;:10,&quot;solidity&quot;:0.2}},&quot;type&quot;:&quot;histogram&quot;}],&quot;scattergl&quot;:[{&quot;type&quot;:&quot;scattergl&quot;,&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}}}],&quot;scatter3d&quot;:[{&quot;type&quot;:&quot;scatter3d&quot;,&quot;line&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}}}],&quot;scattermap&quot;:[{&quot;type&quot;:&quot;scattermap&quot;,&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}}}],&quot;scatterternary&quot;:[{&quot;type&quot;:&quot;scatterternary&quot;,&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}}}],&quot;scattercarpet&quot;:[{&quot;type&quot;:&quot;scattercarpet&quot;,&quot;marker&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}}}],&quot;carpet&quot;:[{&quot;aaxis&quot;:{&quot;endlinecolor&quot;:&quot;#2a3f5f&quot;,&quot;gridcolor&quot;:&quot;white&quot;,&quot;linecolor&quot;:&quot;white&quot;,&quot;minorgridcolor&quot;:&quot;white&quot;,&quot;startlinecolor&quot;:&quot;#2a3f5f&quot;},&quot;baxis&quot;:{&quot;endlinecolor&quot;:&quot;#2a3f5f&quot;,&quot;gridcolor&quot;:&quot;white&quot;,&quot;linecolor&quot;:&quot;white&quot;,&quot;minorgridcolor&quot;:&quot;white&quot;,&quot;startlinecolor&quot;:&quot;#2a3f5f&quot;},&quot;type&quot;:&quot;carpet&quot;}],&quot;table&quot;:[{&quot;cells&quot;:{&quot;fill&quot;:{&quot;color&quot;:&quot;#EBF0F8&quot;},&quot;line&quot;:{&quot;color&quot;:&quot;white&quot;}},&quot;header&quot;:{&quot;fill&quot;:{&quot;color&quot;:&quot;#C8D4E3&quot;},&quot;line&quot;:{&quot;color&quot;:&quot;white&quot;}},&quot;type&quot;:&quot;table&quot;}],&quot;barpolar&quot;:[{&quot;marker&quot;:{&quot;line&quot;:{&quot;color&quot;:&quot;#E5ECF6&quot;,&quot;width&quot;:0.5},&quot;pattern&quot;:{&quot;fillmode&quot;:&quot;overlay&quot;,&quot;size&quot;:10,&quot;solidity&quot;:0.2}},&quot;type&quot;:&quot;barpolar&quot;}],&quot;pie&quot;:[{&quot;automargin&quot;:true,&quot;type&quot;:&quot;pie&quot;}]},&quot;layout&quot;:{&quot;autotypenumbers&quot;:&quot;strict&quot;,&quot;colorway&quot;:[&quot;#636efa&quot;,&quot;#EF553B&quot;,&quot;#00cc96&quot;,&quot;#ab63fa&quot;,&quot;#FFA15A&quot;,&quot;#19d3f3&quot;,&quot;#FF6692&quot;,&quot;#B6E880&quot;,&quot;#FF97FF&quot;,&quot;#FECB52&quot;],&quot;font&quot;:{&quot;color&quot;:&quot;#2a3f5f&quot;},&quot;hovermode&quot;:&quot;closest&quot;,&quot;hoverlabel&quot;:{&quot;align&quot;:&quot;left&quot;},&quot;paper_bgcolor&quot;:&quot;white&quot;,&quot;plot_bgcolor&quot;:&quot;#E5ECF6&quot;,&quot;polar&quot;:{&quot;bgcolor&quot;:&quot;#E5ECF6&quot;,&quot;angularaxis&quot;:{&quot;gridcolor&quot;:&quot;white&quot;,&quot;linecolor&quot;:&quot;white&quot;,&quot;ticks&quot;:&quot;&quot;},&quot;radialaxis&quot;:{&quot;gridcolor&quot;:&quot;white&quot;,&quot;linecolor&quot;:&quot;white&quot;,&quot;ticks&quot;:&quot;&quot;}},&quot;ternary&quot;:{&quot;bgcolor&quot;:&quot;#E5ECF6&quot;,&quot;aaxis&quot;:{&quot;gridcolor&quot;:&quot;white&quot;,&quot;linecolor&quot;:&quot;white&quot;,&quot;ticks&quot;:&quot;&quot;},&quot;baxis&quot;:{&quot;gridcolor&quot;:&quot;white&quot;,&quot;linecolor&quot;:&quot;white&quot;,&quot;ticks&quot;:&quot;&quot;},&quot;caxis&quot;:{&quot;gridcolor&quot;:&quot;white&quot;,&quot;linecolor&quot;:&quot;white&quot;,&quot;ticks&quot;:&quot;&quot;}},&quot;coloraxis&quot;:{&quot;colorbar&quot;:{&quot;outlinewidth&quot;:0,&quot;ticks&quot;:&quot;&quot;}},&quot;colorscale&quot;:{&quot;sequential&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]],&quot;sequentialminus&quot;:[[0.0,&quot;#0d0887&quot;],[0.1111111111111111,&quot;#46039f&quot;],[0.2222222222222222,&quot;#7201a8&quot;],[0.3333333333333333,&quot;#9c179e&quot;],[0.4444444444444444,&quot;#bd3786&quot;],[0.5555555555555556,&quot;#d8576b&quot;],[0.6666666666666666,&quot;#ed7953&quot;],[0.7777777777777778,&quot;#fb9f3a&quot;],[0.8888888888888888,&quot;#fdca26&quot;],[1.0,&quot;#f0f921&quot;]],&quot;diverging&quot;:[[0,&quot;#8e0152&quot;],[0.1,&quot;#c51b7d&quot;],[0.2,&quot;#de77ae&quot;],[0.3,&quot;#f1b6da&quot;],[0.4,&quot;#fde0ef&quot;],[0.5,&quot;#f7f7f7&quot;],[0.6,&quot;#e6f5d0&quot;],[0.7,&quot;#b8e186&quot;],[0.8,&quot;#7fbc41&quot;],[0.9,&quot;#4d9221&quot;],[1,&quot;#276419&quot;]]},&quot;xaxis&quot;:{&quot;gridcolor&quot;:&quot;white&quot;,&quot;linecolor&quot;:&quot;white&quot;,&quot;ticks&quot;:&quot;&quot;,&quot;title&quot;:{&quot;standoff&quot;:15},&quot;zerolinecolor&quot;:&quot;white&quot;,&quot;automargin&quot;:true,&quot;zerolinewidth&quot;:2},&quot;yaxis&quot;:{&quot;gridcolor&quot;:&quot;white&quot;,&quot;linecolor&quot;:&quot;white&quot;,&quot;ticks&quot;:&quot;&quot;,&quot;title&quot;:{&quot;standoff&quot;:15},&quot;zerolinecolor&quot;:&quot;white&quot;,&quot;automargin&quot;:true,&quot;zerolinewidth&quot;:2},&quot;scene&quot;:{&quot;xaxis&quot;:{&quot;backgroundcolor&quot;:&quot;#E5ECF6&quot;,&quot;gridcolor&quot;:&quot;white&quot;,&quot;linecolor&quot;:&quot;white&quot;,&quot;showbackground&quot;:true,&quot;ticks&quot;:&quot;&quot;,&quot;zerolinecolor&quot;:&quot;white&quot;,&quot;gridwidth&quot;:2},&quot;yaxis&quot;:{&quot;backgroundcolor&quot;:&quot;#E5ECF6&quot;,&quot;gridcolor&quot;:&quot;white&quot;,&quot;linecolor&quot;:&quot;white&quot;,&quot;showbackground&quot;:true,&quot;ticks&quot;:&quot;&quot;,&quot;zerolinecolor&quot;:&quot;white&quot;,&quot;gridwidth&quot;:2},&quot;zaxis&quot;:{&quot;backgroundcolor&quot;:&quot;#E5ECF6&quot;,&quot;gridcolor&quot;:&quot;white&quot;,&quot;linecolor&quot;:&quot;white&quot;,&quot;showbackground&quot;:true,&quot;ticks&quot;:&quot;&quot;,&quot;zerolinecolor&quot;:&quot;white&quot;,&quot;gridwidth&quot;:2}},&quot;shapedefaults&quot;:{&quot;line&quot;:{&quot;color&quot;:&quot;#2a3f5f&quot;}},&quot;annotationdefaults&quot;:{&quot;arrowcolor&quot;:&quot;#2a3f5f&quot;,&quot;arrowhead&quot;:0,&quot;arrowwidth&quot;:1},&quot;geo&quot;:{&quot;bgcolor&quot;:&quot;white&quot;,&quot;landcolor&quot;:&quot;#E5ECF6&quot;,&quot;subunitcolor&quot;:&quot;white&quot;,&quot;showland&quot;:true,&quot;showlakes&quot;:true,&quot;lakecolor&quot;:&quot;white&quot;},&quot;title&quot;:{&quot;x&quot;:0.05}}},&quot;xaxis&quot;:{&quot;anchor&quot;:&quot;y&quot;,&quot;domain&quot;:[0.0,1.0],&quot;title&quot;:{&quot;text&quot;:&quot;temp_c&quot;}},&quot;yaxis&quot;:{&quot;anchor&quot;:&quot;x&quot;,&quot;domain&quot;:[0.0,1.0],&quot;title&quot;:{&quot;text&quot;:&quot;humidity&quot;}},&quot;legend&quot;:{&quot;tracegroupgap&quot;:0},&quot;title&quot;:{&quot;text&quot;:&quot;Temperature vs Humidity&quot;}}}' data-config='{}'></marimo-plotly></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "wlCL",
+      "code_hash": "95fcf0598e415a51b5421b27076b6a92",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='wlCL-0' random-id='a9108a62-4091-da91-1ce3-c554dfd6ebd9'><marimo-matplotlib data-initial-value='{}' data-label='null' data-chart-base64='&quot;data:image/png;base64,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Ex4eHnjrrbfg6+vbCNU+m5iYGKxevRrx8fH49ttv4e3tXevyf/vb33D8+PEqbR07dsSyZcsasMpnd+PGDWzatAk3btxA8+bNERoaih49etS6jhACmzdvxr///W8oFAoMGzYMEydObKSKn94vv/yCQ4cO4d69e2jTpg3eeOMNtGjRosblY2Nj8e677z7SXpffB6mFh4fjxx9/RHZ2Ntq0aYOZM2fCw8Oj1nWuX7+Ob775BsnJyWjbti3mz58PFxeXRqr46RQVFWH9+vU4ffo0jI2N0bNnT0yZMgWWlpY1rjNnzhzcvn27SltISAjmzZvXwNXWj9LSUkydOhVZWVnYt28frKysal32u+++wx9//AErKytMnDgRISEhjVittBjoNTh8+DBee+01TJw4EZGRkXj++ecfu05mZia6d++OTp06ITQ0FD/99BMCAgIQERGBNm3aNELVT+e9997DL7/8gkGDBuHIkSN1ur/9xYsXAaDKP4WmTZs2UIX1Izw8HB988AFCQ0MxYcIEREVFoW/fvvjXv/6FKVOm1LjeggULsGnTJnz22WdQq9WYM2cOrl27hs8//7zxin9Cb7/9NuLi4jBkyBC88MIL2LFjBzp06IBz587V+Lv44MEDHDlyBIcOHYKpqam23dHRsbHKfipz585Feno6goODYWVlhe3bt8PPzw8RERHw8fGpdp2rV6+iR48eGDVqFF599VVs2rQJ3bt3R3R0NOzt7Rt5C+qud+/e6NevH0aMGIG8vDz84x//wLZt23Dy5Mka73h56tQpBAQEYPTo0do2fbrl9XvvvYfIyEjExcWhrKys1mXHjh2L2NhYLFq0CGlpaRg2bBhWr16NqVOnNlK1EhNUrfv374vS0lIhhBAtWrQQS5cufew6CxcuFB4eHtr1NBqNCAgIEBMmTGjQWp9VWlqaEEKIy5cvCwAiOjr6seuMGzdOTJ8+vYErq19ZWVlCrVZXaXv77beFj49PjevcuXNHGBsbi71792rbNm7cKExNTUV6enqD1fqsMjMzqzxWq9WiXbt24s0336xxnRMnTggAori4uKHLq1cPHjyo8litVoumTZuKZcuW1bjOK6+8Ivr06aN9XFJSIlxcXMTHH3/cUGXWiz9va2WfXb9+vcZ1OnfuLL788ssGrqxhHDp0SLRr105s375dAHhk+x/2xx9/CADi4sWL2ra//OUvwsnJSZSVlTVCtdLjGHoNHBwcqhyl1MXhw4fx0ksvaddTKBQYNWoUDh8+3BAl1punPc14+vRpjBgxAjNmzMC2bdt0/tuK7O3tH7lXs5OTEwoKCmpc59dff4WRkRFefvllbduoUaNQVlaGo0ePNlitz6pZs2ZVHhsZGcHBwaHWba00bdo0vPLKK1i8eDHS09MbqsR6Y2dnV+VxfHw8CgoKaj0r9ssvv2DEiBHax0qlEi+//LLO/63+eVtjYmJgY2Pz2L/hvXv3Yvjw4XjjjTdw5MiRBqyw/qSkpGDWrFnYtm0bLCwsHrv84cOH0bJlS3Tu3FnbNnr0aGRkZCA6OrohS9UZDPR6lJiY+MipLDc3N2RnZ2u/3U0uLCwsEBwcjIkTJ8LX1xfz5s2r0xwDXZKXl4c1a9ZUCes/S0xMRLNmzWBubq5ts7a2hq2tLRITExuhyvpx9uxZnD59utZtBYC+ffuiX79+GDZsGE6fPo22bdvi5s2bjVTl04uLi0NISAj69OmD7t27Y9WqVRgyZEi1y2ZnZyM3N7fav1V96NOtW7ciJCQEnTt3xsqVK3Hs2LFa70Xu4OCA4OBgTJo0CU2bNsXIkSPx8ccfN2LFT06j0WDixImYN28e/P3967ROTf9/K58zBBxDr0elpaWPfJKsnKxSWloqRUkN5uuvv0aTJk20j4OCgtCrVy8cPXoU/fv3l7CyuikrK8Orr74KExMTfPnllzUuV12fAhX9qi99eufOHYwZMwbjxo3DmDFjalzO398fx48f147FTpw4ET169MD777+P/fv3N1a5T8XZ2Rnz5s3DgwcPsGPHDnz++efo168fWrVq9ciylf1W3d+qPvRpjx494ODggKSkJHz11Vf4+OOPcejQIRgbG1e7/MGDB7V/q2PGjIGPjw9mzJiBGTNmPHbioFQ+/fRTKBQKLFiwoM7rGNL/35rwCL0e2dnZITs7u0pbVlYWjIyMZPetRw+HOQD07NkTTZs2RVRUlEQV1V15eTnGjx+Pq1ev4ujRo7VO5quuT4GKozxdnwQIAHfv3kW/fv3QtWtXbNq0qdZlraysqkysMjIyQkhIiF70qY2NDUJCQjB+/HgcPHgQ9vb2+OKLL6pd1tbWFgqFotq/VX3oUx8fHwwePBivv/46fvnlF/z00084dOhQjcv/+W/15ZdfhkajQUxMTEOX+tRWrVqFvLw8vPTSSwgJCcGnn34KoOIDyebNm6tdp6b/v4DuT9itLzxCr0d+fn6PjNVER0ejffv2Tzwer29KS0tRUFAAMzMzqUupVXl5OSZMmIDz58/j+PHj8PT0rHV5Pz8/5OTkIDExES1btgRQMUNapVJVGavTRSkpKXjxxRfRrl077Nmz56l+B7Ozs3W+T/9MoVDA09MTaWlp1T5vYWEBX19fREdHIywsTNseHR2t8336Zy1atIBSqaxxW6tTGXq63K+7du2qclR95swZREdHY/bs2ejUqVO16/j5+WHXrl0oKSnRDpFV/j+uaR3ZkXpWnj6oaZb74cOHRXBwsHZW8O7du4WZmZm4cOGCEEKI+Ph4YW9vrzczTGub5f7555+Ld999VwhRMdN28+bNQqPRCCEqZhW/8847wtTUVNy+fbsxS34i5eXlYuzYscLT01MkJCTUuNzQoUPFrl27hBBCqFQq4e7uLmbNmqV9ftKkSaJVq1aivLy8oUt+aqmpqaJ169Zi6NChQqVSVbtMTEyMCA4O1vbZ9u3bq8zcj4qKEk2aNBHvv/9+o9T8tFatWlWlL6KiooS1tXWVv7v169eL8ePHax9/8cUXwtHRUdy5c0cIIcTZs2eFiYmJ2L9/f6PV/aSuXLkijh49WqXtq6++EkZGRiI2NlbbNmvWLLF8+XIhhBBXr14VR44c0T5XVFQkRowYIZycnERBQUGj1F0f9u/f/8gs98zMTBEcHCxOnDghhKi4WsfS0lLb76WlpaJv376if//+UpQsCQZ6DZKTk0VwcLAIDg4WSqVS+Pr6iuDgYPHhhx9ql1mzZo0AIPLz87Vt8+fPFxYWFiIwMFA0adJEjBs3Tucvmdi/f78IDg4WvXv3FgBEr169RHBwcJV/bqNHjxa9e/cWQlRc4jNjxgzh6uoqgoKChJubm/Dw8BDh4eESbUHdrF69WgAQnTp10vZt5U/lpYZCCKFUKqt8gDt9+rRwdnYWvr6+wsfHR7i6uorIyEgpNqHORo4cKQCIF198scp2vvfee9plfv/99yof4A4cOCB8fHyEv7+/6Nq1q1AqlWL27NmipKREoq2om4ULFwpXV1fRu3dv4efnJywtLcW8efOq/N29//77wtnZWftYpVKJ0aNHC2traxEYGCjMzc3FggULpCi/ztLS0sSwYcOEp6eneP7554WXl5do0aKF2Lp1a5XlOnTooL2kND09XQwfPlx4eHiIoKAg0axZM9G5c2ed//39s+oCPTk5WQAQe/bs0bbt3btX2NjYiM6dO4sWLVqIdu3aicTERAkqlga/ba0GhYWFOHHixCPtjo6O6Nq1K4CK8ckrV65g4MCBVSakJCcnIy4uDh4eHjXe2EKXJCUl4dq1a4+0t2vXTntK+uLFi1CpVOjevbv2+ezsbFy9ehXNmjVDq1atdH5YoabtBIBBgwZpL2n79ddf4ePjAy8vL+3zKpUK58+fh0KhQLdu3XT6dCUAXLhwAZmZmY+029vbIzAwEEBF/0VERKB3796wtrYGUDEkERsbi5KSEvj6+urN2GNBQQEuX74MpVIJHx+fR+as3Lx5UzsE8bC4uDjcvXsXrVu31s6I1nVpaWmIi4uDo6MjfHx8Hvm7O3XqFOzs7NChQwdtW2pqKm7duoUWLVrAy8vrkcs3dV1GRgaioqIwYMAAmJhUjBSrVCr8/vvv8Pf3h7Ozs3bZ/Px8REdHw9LSEl26dNG7bX0WDHQiIiIZMJyPLkRERDLGQCciIpIBBjoREZEMMNCJiIhkgIFOREQkAwx0IiIiGWCgExERyQADnYiISAYY6ERERDLAQCciIpIBBjoREZEM/H9VNzoK3ZgkbQAAAABJRU5ErkJggg==&quot;' data-x-bounds='[0.85,4.15]' data-y-bounds='[9.0,31.0]' data-axes-pixel-bounds='[62.5,36.0,450.0,267.0]' data-width='500.0' data-height='300.0' data-debounce='false' data-x-scale='&quot;linear&quot;' data-y-scale='&quot;linear&quot;'></marimo-matplotlib></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "kqZH",
+      "code_hash": "1ab119b8d67c94564707387b64518eff",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"9-containers-forms-composite-widgets\">9. Containers, Forms &amp; Composite Widgets</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "wAgl",
+      "code_hash": "a8697623fa2f4d10d9473f918acc0724",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='wAgl-1' random-id='81431392-54d7-35e8-14a5-35bc1c91d04b'><marimo-tabs data-initial-value='&quot;&quot;' data-label='null' data-tabs='[&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eTab 1&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;,&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eTab 2&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;]' data-orientation='&quot;horizontal&quot;'><div data-kind='tab'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Content inside <strong>Tab 1</strong></span></span></div><div data-kind='tab'><marimo-ui-element object-id='wAgl-0' random-id='d97d5669-ca4d-cdc1-f4f0-15f6ffab3683'><marimo-slider data-initial-value='5' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eSlider inside Tab 2&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-start='0' data-stop='10' data-steps='[]' data-debounce='false' data-disabled='false' data-orientation='&quot;horizontal&quot;' data-show-value='false' data-include-input='false' data-full-width='false'></marimo-slider></marimo-ui-element></div></marimo-tabs></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "rEll",
+      "code_hash": "ef2480aa93c0016e32c895b5784a99c1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='rEll-6' random-id='76f2130c-b3e9-d1c1-7201-e6eaa39a2c97'><marimo-dict data-initial-value='{&quot;0&quot;:&quot;&quot;,&quot;1&quot;:&quot;&quot;,&quot;2&quot;:5}' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eArray of Widgets&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-element-ids='{&quot;rEll-3&quot;:&quot;0&quot;,&quot;rEll-4&quot;:&quot;1&quot;,&quot;rEll-5&quot;:&quot;2&quot;}'><marimo-json-output data-json-data='[&quot;text/html:&#92;u003cmarimo-ui-element object-id=&#x27;rEll-3&#x27; random-id=&#x27;a16180a7-ad1f-49f0-70d0-45c1c7c79dca&#x27;&#92;u003e&#92;u003cmarimo-text data-initial-value=&#x27;&amp;quot;&amp;quot;&#x27; data-label=&#x27;null&#x27; data-placeholder=&#x27;&amp;quot;Item 1&amp;quot;&#x27; data-kind=&#x27;&amp;quot;text&amp;quot;&#x27; data-full-width=&#x27;false&#x27; data-disabled=&#x27;false&#x27; data-debounce=&#x27;true&#x27;&#92;u003e&#92;u003c/marimo-text&#92;u003e&#92;u003c/marimo-ui-element&#92;u003e&quot;,&quot;text/html:&#92;u003cmarimo-ui-element object-id=&#x27;rEll-4&#x27; random-id=&#x27;cb0964af-d6c3-886d-351c-cd641eb6339c&#x27;&#92;u003e&#92;u003cmarimo-text data-initial-value=&#x27;&amp;quot;&amp;quot;&#x27; data-label=&#x27;null&#x27; data-placeholder=&#x27;&amp;quot;Item 2&amp;quot;&#x27; data-kind=&#x27;&amp;quot;text&amp;quot;&#x27; data-full-width=&#x27;false&#x27; data-disabled=&#x27;false&#x27; data-debounce=&#x27;true&#x27;&#92;u003e&#92;u003c/marimo-text&#92;u003e&#92;u003c/marimo-ui-element&#92;u003e&quot;,&quot;text/html:&#92;u003cmarimo-ui-element object-id=&#x27;rEll-5&#x27; random-id=&#x27;a3ecce91-016f-760b-f9f1-24e84c5e4b87&#x27;&#92;u003e&#92;u003cmarimo-slider data-initial-value=&#x27;5&#x27; data-label=&#x27;null&#x27; data-start=&#x27;1&#x27; data-stop=&#x27;10&#x27; data-steps=&#x27;[]&#x27; data-debounce=&#x27;false&#x27; data-disabled=&#x27;false&#x27; data-orientation=&#x27;&amp;quot;horizontal&amp;quot;&#x27; data-show-value=&#x27;false&#x27; data-include-input=&#x27;false&#x27; data-full-width=&#x27;false&#x27;&#92;u003e&#92;u003c/marimo-slider&#92;u003e&#92;u003c/marimo-ui-element&#92;u003e&quot;]' data-value-types='&quot;python&quot;' data-name='&quot;Array of Widgets&quot;'></marimo-json-output></marimo-dict></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "dGlV",
+      "code_hash": "ade94597c7aea6052f4514eedd885ece",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='dGlV-6' random-id='c87c5531-895e-5164-af43-0e5ca0ec63ad'><marimo-dict data-initial-value='{&quot;name&quot;:&quot;&quot;,&quot;age&quot;:12,&quot;active&quot;:true}' data-label='&quot;&#92;u003cspan class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&#92;u003e&#92;u003cspan class=&#92;&quot;paragraph&#92;&quot;&#92;u003eDictionary of Widgets&#92;u003c/span&#92;u003e&#92;u003c/span&#92;u003e&quot;' data-element-ids='{&quot;dGlV-3&quot;:&quot;name&quot;,&quot;dGlV-4&quot;:&quot;age&quot;,&quot;dGlV-5&quot;:&quot;active&quot;}'><marimo-json-output data-json-data='{&quot;name&quot;:&quot;text/html:&#92;u003cmarimo-ui-element object-id=&#x27;dGlV-3&#x27; random-id=&#x27;192e99cc-0161-4b99-1e4b-07f55e066fe9&#x27;&#92;u003e&#92;u003cmarimo-text data-initial-value=&#x27;&amp;quot;&amp;quot;&#x27; data-label=&#x27;null&#x27; data-placeholder=&#x27;&amp;quot;Student name&amp;quot;&#x27; data-kind=&#x27;&amp;quot;text&amp;quot;&#x27; data-full-width=&#x27;false&#x27; data-disabled=&#x27;false&#x27; data-debounce=&#x27;true&#x27;&#92;u003e&#92;u003c/marimo-text&#92;u003e&#92;u003c/marimo-ui-element&#92;u003e&quot;,&quot;age&quot;:&quot;text/html:&#92;u003cmarimo-ui-element object-id=&#x27;dGlV-4&#x27; random-id=&#x27;1b90143a-8877-eb67-03ee-d00fbe4c9073&#x27;&#92;u003e&#92;u003cmarimo-number data-initial-value=&#x27;12&#x27; data-label=&#x27;null&#x27; data-start=&#x27;5&#x27; data-stop=&#x27;18&#x27; data-debounce=&#x27;false&#x27; data-full-width=&#x27;false&#x27; data-disabled=&#x27;false&#x27;&#92;u003e&#92;u003c/marimo-number&#92;u003e&#92;u003c/marimo-ui-element&#92;u003e&quot;,&quot;active&quot;:&quot;text/html:&#92;u003cmarimo-ui-element object-id=&#x27;dGlV-5&#x27; random-id=&#x27;858f76fe-bbcf-0b59-600f-ddbc4267c23b&#x27;&#92;u003e&#92;u003cmarimo-checkbox data-initial-value=&#x27;true&#x27; data-label=&#x27;null&#x27; data-disabled=&#x27;false&#x27;&#92;u003e&#92;u003c/marimo-checkbox&#92;u003e&#92;u003c/marimo-ui-element&#92;u003e&quot;}' data-value-types='&quot;python&quot;' data-name='&quot;Dictionary of Widgets&quot;'></marimo-json-output></marimo-dict></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SdmI",
+      "code_hash": "e12a1d83f3992d0e1b45b7685feb8923",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='SdmI-4' random-id='30d5eea0-def7-4564-0a3a-c09dcd63bd52'><marimo-dict data-initial-value='{&quot;name&quot;:&quot;&quot;,&quot;subject&quot;:[&quot;Coding&quot;]}' data-label='null' data-element-ids='{&quot;SdmI-2&quot;:&quot;name&quot;,&quot;SdmI-3&quot;:&quot;subject&quot;}'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\"><strong>Student Profile</strong></span>\n<ul>\n<li>Name: <marimo-ui-element object-id='SdmI-2' random-id='5ad4dae3-5ed4-87d5-193f-2afc6359ab87'><marimo-text data-initial-value='&quot;&quot;' data-label='null' data-placeholder='&quot;Enter name&quot;' data-kind='&quot;text&quot;' data-full-width='false' data-disabled='false' data-debounce='true'></marimo-text></marimo-ui-element></li>\n<li>Favorite Subject: <marimo-ui-element object-id='SdmI-3' random-id='6a992548-4807-2ab6-011c-ae54222d921d'><marimo-dropdown data-initial-value='[&quot;Coding&quot;]' data-label='null' data-options='[&quot;Math&quot;,&quot;Science&quot;,&quot;Coding&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false' data-disabled='false'></marimo-dropdown></marimo-ui-element></li>\n</ul></span></marimo-dict></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lgWD",
+      "code_hash": "2738c22ec7422f7eb897f72792ef2ade",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='lgWD-8' random-id='745e8be8-de3a-0016-b25b-0f09d7ae85bb'><marimo-form data-initial-value='null' data-label='null' data-element-id='&quot;lgWD-7&quot;' data-loading='false' data-bordered='true' data-submit-button-label='&quot;Submit Form&quot;' data-submit-button-disabled='false' data-clear-on-submit='false' data-show-clear-button='false' data-clear-button-label='&quot;Clear&quot;' data-should-validate='false'><marimo-ui-element object-id='lgWD-7' random-id='9e2302f5-d6a8-2345-8900-b70cef86c99f'><marimo-dict data-initial-value='{&quot;rating&quot;:5,&quot;comment&quot;:&quot;&quot;}' data-label='null' data-element-ids='{&quot;lgWD-5&quot;:&quot;rating&quot;,&quot;lgWD-6&quot;:&quot;comment&quot;}'><span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\"><strong>Submit Feedback</strong></span>\n<ul>\n<li>Rating: <marimo-ui-element object-id='lgWD-5' random-id='9eeae20c-b26a-8edc-5f15-3bee4615294e'><marimo-slider data-initial-value='5' data-label='null' data-start='1' data-stop='5' data-steps='[]' data-debounce='false' data-disabled='false' data-orientation='&quot;horizontal&quot;' data-show-value='true' data-include-input='false' data-full-width='false'></marimo-slider></marimo-ui-element></li>\n<li>Comment: <marimo-ui-element object-id='lgWD-6' random-id='e15aa7db-9931-8ec9-920c-ce13f70c1656'><marimo-text data-initial-value='&quot;&quot;' data-label='null' data-placeholder='&quot;Your thoughts...&quot;' data-kind='&quot;text&quot;' data-full-width='false' data-disabled='false' data-debounce='true'></marimo-text></marimo-ui-element></li>\n</ul></span></marimo-dict></marimo-ui-element></marimo-form></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "yOPj",
+      "code_hash": "022a0f6a15b3f17d4cc74b9b33051427",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"10-chat-custom-anywidget\">10. Chat &amp; Custom AnyWidget</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "fwwy",
+      "code_hash": "e7c8a5ce1157076e7e2550dfbef7359c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='fwwy-0' random-id='e198dfb4-e0fa-571a-061b-8806d860deb2'><marimo-chatbot data-initial-value='{&quot;messages&quot;:[]}' data-label='null' data-prompts='[&quot;Hello!&quot;,&quot;What can you do?&quot;]' data-show-configuration-controls='false' data-config='{&quot;max_tokens&quot;:4096,&quot;temperature&quot;:0.5,&quot;top_p&quot;:1,&quot;top_k&quot;:40,&quot;frequency_penalty&quot;:0,&quot;presence_penalty&quot;:0}' data-allow-attachments='false' data-disabled='false'></marimo-chatbot></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "LJZf",
+      "code_hash": "96ff7c4cf3a272645af999b0fbb4b09f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='LJZf-0' random-id='2471b2b6-baf3-e5bd-aa61-8a7b53a608bc'><marimo-anywidget data-initial-value='{&quot;model_id&quot;:&quot;c3f63059c7924601afc36dbe119290a6&quot;}' data-label='null' data-model-id='&quot;c3f63059c7924601afc36dbe119290a6&quot;'></marimo-anywidget></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
