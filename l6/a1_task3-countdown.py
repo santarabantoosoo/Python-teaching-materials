@@ -37,12 +37,6 @@ def _(mo):
 
     It runs after the loop. Do not indent it.
 
-    Type your countdown program:
-    (Write in your editor)
-
-    Run it. What did you see? Write here:
-    (Write output in your editor)
-
     ### Checklist
     Test and tick:
     """)
