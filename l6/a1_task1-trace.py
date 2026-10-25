@@ -7,6 +7,7 @@ app = marimo.App()
 @app.cell(hide_code=True)
 def _():
     import marimo as mo
+
     return (mo,)
 
 
@@ -60,7 +61,7 @@ def _(mo):
     | 6: output = ? | | |
     | 7: count = ? | | |
 
-    What will the program show? Write here:
+    What will the program show?
     (Write in your editor)
 
     ### Checklist
@@ -75,9 +76,9 @@ def _(mo):
     chk_trace6 = mo.ui.checkbox(label="Line 6: output = 0")
     chk_trace7 = mo.ui.checkbox(label="Line 7: count = -1")
     chk_output = mo.ui.checkbox(label="Program shows: 3, 2, 1, 0")
-    
+
     mo.vstack([chk_trace5, chk_trace6, chk_trace7, chk_output], gap=4)
-    return (chk_trace5, chk_trace6, chk_trace7, chk_output)
+    return
 
 
 @app.cell(hide_code=True)

@@ -7,6 +7,7 @@ app = marimo.App()
 @app.cell(hide_code=True)
 def _():
     import marimo as mo
+
     return (mo,)
 
 
@@ -20,7 +21,7 @@ def _(mo):
     Same actions again and again. Use `while` to repeat.
 
     ### Step 1
-    Type this start. It will not run yet.
+    Copy and paste this in your editor.
 
     ```python
     count = 3
@@ -30,19 +31,12 @@ def _(mo):
     ```
 
     ### Step 2
-    Pick the condition. Last value printed must be 1.
+    Pick the right condition and add it to your code. Last value printed must be 1.
 
     - `while count > 1:`
     - `while count >= 1:`
     - `while count < 1:`
     - `while count == 1:`
-
-    Why did you pick it? Write here:
-    (Write in your editor)
-
-    ### Step 3
-    Type your full while program:
-    (Write in your editor)
 
     ### Checklist
     Red error (خطأ)? Fix it (صلّحه). Tick what you found:
@@ -56,9 +50,9 @@ def _(mo):
     chk_colon = mo.ui.checkbox(label="Forgot the colon `:`")
     chk_indent = mo.ui.checkbox(label="Forgot to indent inside `while`")
     chk_condition = mo.ui.checkbox(label="Correct condition: `while count >= 1:`")
-    
+
     mo.vstack([chk_spelling, chk_colon, chk_indent, chk_condition], gap=4)
-    return (chk_spelling, chk_colon, chk_indent, chk_condition)
+    return
 
 
 @app.cell(hide_code=True)

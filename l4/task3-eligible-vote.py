@@ -7,6 +7,7 @@ app = marimo.App()
 @app.cell(hide_code=True)
 def _():
     import marimo as mo
+
     return (mo,)
 
 
@@ -26,7 +27,7 @@ def _(mo):
     | Program asks | You type | Program shows |
     |---|---|---|
     | `How old are you?` | `21` | `You are eligible to vote` |
-    | `How old are you?` | `14` | `You are not eligible to vote` `4 more years to go` |
+    | `How old are you?` | `14` | `You are not eligible to vote.` `4 more years to go` |
 
     ### Step 1: Write your program
 
@@ -48,12 +49,12 @@ def _(mo):
     chk_colon = mo.ui.checkbox(label="Colon : after if and else?")
     chk_equal = mo.ui.checkbox(label="Used >= or > correctly?")
     chk_input = mo.ui.checkbox(label="Used int(input()) for age?")
-    
+
     mo.vstack([
         chk_eligible, chk_not_eligible, chk_years,
         chk_indent, chk_colon, chk_equal, chk_input
     ], gap=4)
-    return (chk_eligible, chk_not_eligible, chk_years, chk_indent, chk_colon, chk_equal, chk_input)
+    return
 
 
 @app.cell(hide_code=True)

@@ -7,6 +7,7 @@ app = marimo.App()
 @app.cell(hide_code=True)
 def _():
     import marimo as mo
+
     return (mo,)
 
 
@@ -54,9 +55,9 @@ def _(mo):
     chk_prints10to1 = mo.ui.checkbox(label="Prints 10 down to 1")
     chk_liftoff = mo.ui.checkbox(label="Shows `Lift off!` after loop (not indented)")
     chk_condition = mo.ui.checkbox(label="Correct condition: `while count >= 1:`")
-    
+
     mo.vstack([chk_start10, chk_prints10to1, chk_liftoff, chk_condition], gap=4)
-    return (chk_start10, chk_prints10to1, chk_liftoff, chk_condition)
+    return
 
 
 @app.cell(hide_code=True)
