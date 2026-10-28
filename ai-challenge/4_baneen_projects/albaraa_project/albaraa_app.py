@@ -300,6 +300,12 @@ def _():
         color: #fde68a !important;
         background: rgba(0, 0, 0, 0.45);
     }}
+    /* Photo shows through the WHOLE app: cells and app shells are
+       transparent, not just the side panel (classes from marimo's CSS). */
+    #App, .marimo-cell, .bg-background, .bg-background\\/80,
+    .bg-background\\/90, .bg-background\\/95 {{
+        background-color: transparent !important;
+    }}
     </style>"""
     )
     return
@@ -320,12 +326,12 @@ def _(SECTIONS, get_game, new_quiz, set_game):
     if g["stage"] == "start":
         math_btn = mo.ui.button(
             label=f"🧮 Math — {len(SECTIONS['Math']['questions'])} questions",
-            kind="primary",
+            kind="success",
             on_click=lambda _: set_game(new_quiz("Math")),
         )
         science_btn = mo.ui.button(
             label=f"🔬 Science — {len(SECTIONS['Science']['questions'])} questions",
-            kind="secondary",
+            kind="neutral",
             on_click=lambda _: set_game(new_quiz("Science")),
         )
         parts = [
@@ -377,7 +383,7 @@ def _(SECTIONS, get_game, new_quiz, set_game):
         is_last = g["index"] == total - 1
         next_btn = mo.ui.button(
             label="🏁 See results" if is_last else "➡️ Next question",
-            kind="primary" if not is_last else "success",
+            kind="success",
             on_click=lambda _: set_game(lambda s: next_question(s)),
         )
         parts = [
@@ -410,7 +416,7 @@ def _(SECTIONS, get_game, new_quiz, set_game):
         )
         other_btn = mo.ui.button(
             label="🎯 Try the other section",
-            kind="secondary",
+            kind="neutral",
             on_click=lambda _: set_game(new_start()),
         )
         parts = [
