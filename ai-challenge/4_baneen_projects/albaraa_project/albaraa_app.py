@@ -275,11 +275,9 @@ def _(get_game, set_game, new_start, show_code):
     # the dark photo was unreadable. Inline panel = fully controllable CSS.
     left_panel = mo.vstack([
         mo.md('<div class="albaraa-text"><h2>🌟 Albaraa App</h2></div>'),
-        mo.md('<div class="albaraa-text">Math & Science quiz — الرياضيات والعلوم</div>'),
-        mo.md("---"),
         mo.md(f'<div class="albaraa-text">{progress_md}</div>'),
-        restart_btn,
         mo.md("---"),
+        restart_btn,
         show_code,
     ])
     return (left_panel,)
@@ -330,7 +328,7 @@ def _():
 @app.cell
 def _():
     mo.md("""
-    <div class="albaraa-text"><h1>🌟 Albaraa's Math & Science Challenge</h1><p>Two sections: <strong>10 math questions</strong> 🧮 and <strong>4 science questions</strong> 🔬 — Python checks your answers. الأسئلة بالعربي ✍️</p></div>
+    <div class="albaraa-text"><h1>🌟 Albaraa's Math & Science Challenge</h1><p>Two sections: <strong>10 math</strong> 🧮 and <strong>4 science</strong> 🔬 questions. Python checks your answers.</p></div>
     """)
     return
 
@@ -351,11 +349,8 @@ def _(SECTIONS, get_game, new_quiz, set_game):
             on_click=lambda _: set_game(new_quiz("Science")),
         )
         parts = [
-            mo.md(
-                '<div class="albaraa-text"><h2>Pick your section</h2>'
-                "<p>اختار قسم: الرياضيات 🧮 أو العلوم 🔬</p></div>"
-            ),
-            mo.hstack([math_btn, science_btn], justify="center"),
+            mo.md('<div class="albaraa-text"><p><strong>Pick a section</strong></p></div>'),
+            mo.hstack([math_btn, science_btn], justify="start"),
         ]
 
     elif g["stage"] == "playing":
@@ -389,7 +384,7 @@ def _(SECTIONS, get_game, new_quiz, set_game):
         picked_text = option_letter_to_text(q, g["picked"])
         correct_text = option_letter_to_text(q, q["correct"])
         if g["is_correct"]:
-            header = mo.callout("✅ Well done! أحسنت!", kind="success", title="Correct")
+            header = mo.callout("✅ Well done!", kind="success", title="Correct")
         else:
             header = mo.callout(
                 f"You picked **{picked_text}** — the correct answer is **{correct_text}**",
@@ -420,9 +415,9 @@ def _(SECTIONS, get_game, new_quiz, set_game):
         total = len(questions_of(g))
         score = g["score"]
         if score == total:
-            verdict = "🏆 Perfect score! علامة كاملة 🎉"
+            verdict = "🏆 Perfect score!"
         elif score * 2 >= total:
-            verdict = "👏 Well done! شاطر! Keep practising."
+            verdict = "👏 Well done!"
         else:
             verdict = "💪 Good try — play again and beat your score!"
         play_again = mo.ui.button(
@@ -466,11 +461,13 @@ def _(show_code, student_code):
     code_view = (
         mo.vstack([
             mo.md(
-                '<div class="albaraa-text"><h2>💻 Core Python code</h2>'
-                "<p>From <code>albaraa_code.py</code> — the concepts you learned.</p></div>"
+                '<div class="albaraa-text"><strong>💻 Core Python code</strong> '
+                "— from <code>albaraa_code.py</code></div>"
             ),
-            mo.md(f"```python\n{student_code()}\n```"),
-        ])
+            # No language marker on the fence: plain monospace, no
+            # syntax-highlight background chunks.
+            mo.md(f"```\n{student_code()}\n```"),
+        ], gap=0.25)
         if show_code.value
         else None
     )
