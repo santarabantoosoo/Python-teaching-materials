@@ -187,7 +187,7 @@ def _(get_game, helper_checkbox, set_game, show_code):
         f"{len(SECTIONS[_game_section]['questions'])} questions"
     )
     left_panel = mo.vstack([
-        mo.md("**🧠 Mousa App**"),
+        mo.md("### 🧠 Mousa App"),
         mo.md(progress_md),
         mo.md("---"),
         restart_btn,
@@ -269,7 +269,7 @@ def _(get_game, quiz_array, result_md, set_game, submit_all):
             on_click=lambda _: set_game("Psychology"),
         )
         parts = [
-            mo.md("**Pick a section**"),
+            mo.md("### Pick a section"),
             mo.hstack([math_btn, psychology_btn], justify="start"),
         ]
     else:
@@ -296,7 +296,7 @@ def _(left_panel, show_code, student_code, view):
     code_view = (
         mo.vstack([
             mo.md(
-                "<strong>💻 Core Python code</strong> — from <code>mousa_code.py</code>"
+                "### 💻 Core Python code — from <code>mousa_code.py</code>"
             ),
             code_block,
         ], gap=0.25)
