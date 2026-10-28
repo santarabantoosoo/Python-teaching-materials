@@ -288,10 +288,11 @@ def _():
         f"""<style>
     body {{
         background-image: linear-gradient(rgba(2, 6, 23, 0.70), rgba(2, 6, 23, 0.70)), {background_css()};
-        background-size: cover;
+        background-size: 100% 100%, contain;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        background-color: #020617;
     }}
     .albaraa-text, .albaraa-text * {{
         color: #f8fafc !important;
@@ -305,6 +306,18 @@ def _():
     #App, .marimo-cell, .bg-background, .bg-background\\/80,
     .bg-background\\/90, .bg-background\\/95 {{
         background-color: transparent !important;
+    }}
+    /* Readable text on the dark photo: default-colored text (sidebar prose,
+       headings, radio/checkbox labels, progress code) forced to light colors.
+       .mo-label / code are real marimo classes; marimo-sidebar is marimo's
+       own custom element tag. */
+    #App, #App h1, #App h2, #App h3, #App h4, #App h5, #App h6,
+    #App label, .mo-label, .marimo-sidebar {{
+        color: #f8fafc !important;
+    }}
+    #App code {{
+        color: #fde68a !important;
+        background: rgba(0, 0, 0, 0.45);
     }}
     </style>"""
     )
@@ -337,7 +350,7 @@ def _(SECTIONS, get_game, new_quiz, set_game):
         parts = [
             mo.md(
                 '<div class="albaraa-text"><h2>Pick your section</h2>'
-                "<p>اختاري قسم: الرياضيات 🧮 أو العلوم 🔬</p></div>"
+                "<p>اختار قسم: الرياضيات 🧮 أو العلوم 🔬</p></div>"
             ),
             mo.hstack([math_btn, science_btn], justify="center"),
         ]
@@ -406,7 +419,7 @@ def _(SECTIONS, get_game, new_quiz, set_game):
         if score == total:
             verdict = "🏆 Perfect score! علامة كاملة 🎉"
         elif score * 2 >= total:
-            verdict = "👏 Well done! شاطرة! Keep practising."
+            verdict = "👏 Well done! شاطر! Keep practising."
         else:
             verdict = "💪 Good try — play again and beat your score!"
         play_again = mo.ui.button(
