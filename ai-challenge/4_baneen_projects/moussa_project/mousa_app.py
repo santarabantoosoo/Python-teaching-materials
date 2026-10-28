@@ -187,13 +187,13 @@ def _(get_game, helper_checkbox, set_game, show_code):
         f"{len(SECTIONS[_game_section]['questions'])} questions"
     )
     left_panel = mo.vstack([
-        mo.md("## 🧠 Mousa App"),
+        mo.md("**🧠 Mousa App**"),
         mo.md(progress_md),
         mo.md("---"),
         restart_btn,
         helper_checkbox,
         show_code,
-    ])
+    ], gap=0.35)
     return (left_panel,)
 
 
@@ -212,6 +212,7 @@ def _(get_game):
                 options=q_item[1],
                 value=q_item[1][1],
                 label=f"**السؤال {idx+1}:** {q_item[0]}",
+                inline=len(q_item[1]) == 2,  # yes/no questions: one row
             )
             quiz_inputs.append(radio_group)
         quiz_array = mo.ui.array(quiz_inputs)
@@ -302,12 +303,22 @@ def _(left_panel, show_code, student_code, view):
         if show_code.value
         else None
     )
-    layout = mo.vstack([
-        code_view,
-        mo.hstack(
-            [left_panel, view], justify="start", align="start", widths=[0.27, 0.73]
-        ),
-    ])
+    layout = mo.vstack(
+        [
+            c
+            for c in (
+                code_view,
+                mo.hstack(
+                    [left_panel, view],
+                    justify="start",
+                    align="start",
+                    widths=[0.27, 0.73],
+                ),
+            )
+            if c is not None  # never stack None — it renders as the text "None"
+        ],
+        gap=0.4,
+    )
     layout
     return
 
