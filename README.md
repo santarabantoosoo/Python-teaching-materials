@@ -29,8 +29,8 @@ A repo for supplementaries (eg. deployed HTML apps) that can be used in class.
 - AI challenge [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/ai-challenge/ai_challenge.py)
 
 ### Osama App — Geography Quiz
-- Osama app (deployed): https://santarabantoosoo.github.io/Python-teaching-materials/ai-challenge/osama_project/index.html
-- Notebook: [osama_app.py](ai-challenge/osama_project/osama_app.py) (marimo, 10 geography questions about Egypt in Arabic)
+- Osama app (deployed): https://santarabantoosoo.github.io/Python-teaching-materials/ai-challenge/4_baneen_projects/osama_project/index.html
+- Notebook: [osama_app.py](ai-challenge/4_baneen_projects/osama_project/osama_app.py) (marimo, 10 geography questions about Egypt in Arabic)
 
 ### Albaraa App — Math & Science Quiz
 - Albaraa app (deployed): https://santarabantoosoo.github.io/Python-teaching-materials/ai-challenge/4_baneen_projects/albaraa_project/index.html

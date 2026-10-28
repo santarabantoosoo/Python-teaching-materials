@@ -26,37 +26,37 @@ with app.setup:
 
     import marimo as mo
 
-    BACKGROUND_IMAGE = "osama_baraa_football.jpeg"
+    BACKGROUND_IMAGE = "osama_background_pic.jpeg"
     STUDENT_CODE_FILE = "osama_code.py"
 
     # Fallback copy of osama_code.py, used by the deployed WASM build where the
     # browser cannot open files from disk. Locally the real file is read instead.
     STUDENT_CODE_FALLBACK = '''# concepts learned
 
-    name = input("whats ur name?")
+name = input("whats ur name?")
 
-    answer= int(input("1+2="))
-    if answer==3:
-       print("right")
-    else:
-       print("wrong")
-
-
-    ## Choosing UI elemets
-
-    radio = mo.ui.radio(
-        options=["Python", "Scratch", "R"],
-        value="Python",
-        label="Radio Buttons",
-    )
-    radio
+answer= int(input("1+2="))
+if answer==3:
+   print("right")
+else:
+   print("wrong")
 
 
-    button = mo.ui.button(
-        kind="success",
-        label="Submit answer",
-    )
-    button'''
+## Choosing UI elemets
+
+radio = mo.ui.radio(
+    options=["Python", "Scratch", "R"],
+    value="Python",
+    label="Radio Buttons",
+)
+radio
+
+
+button = mo.ui.button(
+    kind="success",
+    label="Submit answer",
+)
+button'''
 
     # 10 questions from osama_questions.md — in the same order, with 4 choices each.
     QUESTIONS = [
@@ -129,7 +129,10 @@ with app.setup:
 @app.function
 def read_local_file(name):
     """Read a file next to this notebook. Returns None in WASM (no disk access)."""
-    for base in (Path.cwd(), Path.cwd() / "ai-challenge" / "osama_project"):
+    for base in (
+        Path.cwd(),
+        Path.cwd() / "ai-challenge" / "4_baneen_projects" / "osama_project",
+    ):
         try:
             return (base / name).read_bytes()
         except OSError:
@@ -146,7 +149,7 @@ def student_code():
 
 @app.function
 def background_css():
-    """Football photo as background: inlined locally, separate file when deployed."""
+    """Osama's photo as background: inlined locally, separate file when deployed."""
     data = read_local_file(BACKGROUND_IMAGE)
     if data is not None:
         b64 = base64.b64encode(data).decode("ascii")
@@ -227,7 +230,7 @@ def _():
 
 
 @app.cell
-def _(get_game, set_game, show_code):
+def _(get_game, set_game):
     sidebar_g = get_game()
     restart_btn = mo.ui.button(
         label="🔄 Restart",
@@ -242,16 +245,17 @@ def _(get_game, set_game, show_code):
             f"Question **{sidebar_g['index'] + 1} / {TOTAL}**<br>"
             f"Score: **{sidebar_g['score']}**"
         )
-    mo.sidebar([
-        mo.md("## 🌍 Osama App"),
-        mo.md("Geography quiz about Egypt"),
+    # Left panel rendered as normal app content (not mo.sidebar): the sidebar
+    # custom element copies stylesheet rules we cannot override, so text on
+    # the dark photo was unreadable. Inline panel = fully controllable CSS.
+    left_panel = mo.vstack([
+        mo.md('<div class="osama-text"><h2>🌍 Osama App</h2></div>'),
+        mo.md(f'<div class="osama-text">{progress_md}</div>'),
         mo.md("---"),
-        mo.md(progress_md),
         restart_btn,
-        mo.md("---"),
         show_code,
     ])
-    return
+    return (left_panel,)
 
 
 @app.cell
@@ -260,15 +264,34 @@ def _():
         f"""<style>
     body {{
         background-image: linear-gradient(rgba(2, 6, 23, 0.70), rgba(2, 6, 23, 0.70)), {background_css()};
-        background-size: cover;
+        background-size: 100% 100%, contain;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        background-color: #020617;
     }}
     .osama-text, .osama-text * {{
         color: #f8fafc !important;
     }}
     .osama-text code {{
+        color: #fde68a !important;
+        background: rgba(0, 0, 0, 0.45);
+    }}
+    /* Photo shows through the WHOLE app: cells and app shells are
+       transparent, not just the side panel (classes from marimo's CSS). */
+    #App, .marimo-cell, .bg-background, .bg-background\\/80,
+    .bg-background\\/90, .bg-background\\/95 {{
+        background-color: transparent !important;
+    }}
+    /* Readable text on the dark photo: default-colored text (prose,
+       headings, radio/checkbox labels, progress code) forced to light colors.
+       .mo-label / code are real marimo classes; marimo-sidebar is marimo's
+       own custom element tag. */
+    #App, #App h1, #App h2, #App h3, #App h4, #App h5, #App h6,
+    #App label, .mo-label, .marimo-sidebar {{
+        color: #f8fafc !important;
+    }}
+    #App code {{
         color: #fde68a !important;
         background: rgba(0, 0, 0, 0.45);
     }}
@@ -280,7 +303,7 @@ def _():
 @app.cell
 def _():
     mo.md("""
-    <div class="osama-text"><h1>🌍 Osama Geography Challenge</h1><p>Answer <strong>10 questions</strong> about Egypt — Python checks your answers. الأسئلة بالعربي ✍️</p></div>
+    <div class="osama-text"><h1>🌍 Osama's Geography Challenge</h1><p>Answer <strong>10 questions</strong> about Egypt. Python checks your answers.</p></div>
     """)
     return
 
@@ -327,7 +350,7 @@ def _(get_game, set_game):
         is_last = g["index"] == TOTAL - 1
         next_btn = mo.ui.button(
             label="🏁 See results" if is_last else "➡️ Next question",
-            kind="primary" if not is_last else "success",
+            kind="success",
             on_click=lambda _: set_game(lambda s: next_question(s)),
         )
         parts = [
@@ -347,9 +370,9 @@ def _(get_game, set_game):
     else:  # finished
         score = g["score"]
         if score >= 9:
-            verdict = "🏆 Excellent! You really know Egypt's geography."
+            verdict = "🏆 Excellent!"
         elif score >= 6:
-            verdict = "👏 Well done! Keep practising."
+            verdict = "👏 Well done!"
         else:
             verdict = "💪 Good try — play again and beat your score!"
         play_again = mo.ui.button(
@@ -368,26 +391,43 @@ def _(get_game, set_game):
         ]
 
     view = mo.vstack(parts)
-    view
-    return
+    return (view,)
 
 
 @app.cell
-def _(show_code):
+def _(left_panel, show_code, student_code, view):
+    import html
+
+    # mo.md code fences are always syntax-highlighted by marimo's markdown
+    # renderer (even without a language marker), which made the code hard to
+    # read. Render a plain <pre> via real HTML instead — no highlighting.
+    code_block = mo.Html(
+        "<div style='overflow-x:auto'>"
+        "<pre style='margin:0;padding:0.9rem 1.1rem;border-radius:0.5rem;"
+        "background:rgba(2,6,23,0.55);font-family:ui-monospace,SFMono-Regular,"
+        "Menlo,monospace;font-size:0.85rem;line-height:1.55'>"
+        f"{html.escape(student_code())}"
+        "</pre></div>"
+    )
     code_view = (
         mo.vstack([
             mo.md(
-                '<div class="osama-text"><h2>💻 Core Python code</h2>'
-                "<p>From <code>osama_code.py</code> — the concepts you learned.</p></div>"
+                '<div class="osama-text"><strong>💻 Core Python code</strong> '
+                "— from <code>osama_code.py</code></div>"
             ),
-            mo.md(f"```python\n{student_code()}\n```"),
-        ])
+            code_block,
+        ], gap=0.25)
         if show_code.value
         else None
     )
-    code_view
+    layout = mo.vstack([
+        code_view,
+        mo.hstack(
+            [left_panel, view], justify="start", align="start", widths=[0.27, 0.73]
+        ),
+    ])
+    layout
     return
-
 
 if __name__ == "__main__":
     app.run()
