@@ -458,15 +458,26 @@ def _(left_panel, view):
 
 @app.cell
 def _(show_code, student_code):
+    import html
+
+    # mo.md code fences are always syntax-highlighted by marimo's markdown
+    # renderer (even without a language marker), which made the code hard to
+    # read. Render a plain <pre> via real HTML instead — no highlighting.
+    code_block = mo.Html(
+        "<div style='overflow-x:auto'>"
+        "<pre style='margin:0;padding:0.9rem 1.1rem;border-radius:0.5rem;"
+        "background:rgba(2,6,23,0.55);font-family:ui-monospace,SFMono-Regular,"
+        "Menlo,monospace;font-size:0.85rem;line-height:1.55'>"
+        f"{html.escape(student_code())}"
+        "</pre></div>"
+    )
     code_view = (
         mo.vstack([
             mo.md(
                 '<div class="albaraa-text"><strong>💻 Core Python code</strong> '
                 "— from <code>albaraa_code.py</code></div>"
             ),
-            # No language marker on the fence: plain monospace, no
-            # syntax-highlight background chunks.
-            mo.md(f"```\n{student_code()}\n```"),
+            code_block,
         ], gap=0.25)
         if show_code.value
         else None
