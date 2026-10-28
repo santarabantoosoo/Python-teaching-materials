@@ -270,16 +270,19 @@ def _(get_game, set_game, new_start, show_code):
             f"Question **{sidebar_g['index'] + 1} / {len(questions_of(sidebar_g))}**<br>"
             f"Score: **{sidebar_g['score']}**"
         )
-    mo.sidebar([
-        mo.md("## 🌟 Albaraa App"),
-        mo.md("Math & Science quiz — الرياضيات والعلوم"),
+    # Left panel rendered as normal app content (not mo.sidebar): the sidebar
+    # custom element copies stylesheet rules we cannot override, so text on
+    # the dark photo was unreadable. Inline panel = fully controllable CSS.
+    left_panel = mo.vstack([
+        mo.md('<div class="albaraa-text"><h2>🌟 Albaraa App</h2></div>'),
+        mo.md('<div class="albaraa-text">Math & Science quiz — الرياضيات والعلوم</div>'),
         mo.md("---"),
-        mo.md(progress_md),
+        mo.md(f'<div class="albaraa-text">{progress_md}</div>'),
         restart_btn,
         mo.md("---"),
         show_code,
     ])
-    return
+    return (left_panel,)
 
 
 @app.cell
@@ -447,6 +450,15 @@ def _(SECTIONS, get_game, new_quiz, set_game):
 
     view = mo.vstack(parts)
     view
+    return
+
+
+@app.cell
+def _(left_panel, view):
+    layout = mo.hstack(
+        [left_panel, view], justify="start", align="start", widths=[0.27, 0.73]
+    )
+    layout
     return
 
 
