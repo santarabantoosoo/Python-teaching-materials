@@ -257,7 +257,7 @@ def _(get_game, set_game, new_start, show_code):
         on_click=lambda _: set_game(new_start()),
     )
     if sidebar_g["stage"] == "start":
-        progress_md = "**Pick a section**<br>🧮 Math • 🔬 Science"
+        progress_md = "🧮 Math • 🔬 Science"
     elif sidebar_g["stage"] == "finished":
         progress_md = (
             f"**Finished {sidebar_g['section']}!**<br>"
@@ -449,8 +449,7 @@ def _(SECTIONS, get_game, new_quiz, set_game):
         ]
 
     view = mo.vstack(parts)
-    view
-    return
+    return (view,)
 
 
 @app.cell
