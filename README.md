@@ -36,6 +36,10 @@ A repo for supplementaries (eg. deployed HTML apps) that can be used in class.
 - Albaraa app (deployed): https://santarabantoosoo.github.io/Python-teaching-materials/ai-challenge/4_baneen_projects/albaraa_project/index.html
 - Notebook: [albaraa_app.py](ai-challenge/4_baneen_projects/albaraa_project/albaraa_app.py) (marimo, 10 math + 4 science questions in Arabic, no AI challenge)
 
+### Mousa App — Math & Psychology Quiz
+- Mousa app (deployed): https://santarabantoosoo.github.io/Python-teaching-materials/ai-challenge/4_baneen_projects/moussa_project/index.html
+- Notebook: [mousa_app.py](ai-challenge/4_baneen_projects/moussa_project/mousa_app.py) (marimo, built on Mousa's own form design: 10 math + 10 psychology questions in Arabic, hard-mode checkbox, win at 4+)
+
 ### Marimo UI Widgets Reference
 - UI widgets gallery [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/santarabantoosoo/Python-teaching-materials/blob/main/marimo_ui/ui_widgets.py)
 

@@ -8,17 +8,19 @@ print("c) 40")
 
 answer = input("Choose your answer (a, b, or c): ")
 
-if answer == "a" or answer == "42":
-    print("Hooray! 🎉")
-    score += 1
-elif answer == "b" or answer == "c":
-    print("Wrong answer! Try again.")
-    print("your score is ",score)
-else:
-    print("Invalid choice! Please pick a, b, or c.")
+score = 0
+while score <= 4:
+    if answer == "a" or answer == "42":
+        print("Hooray! 🎉")
+        score += 1
+    elif answer == "b" or answer == "c":
+        print("Wrong answer! Try again.")
+        print("your score is ",score)
+    else:
+        print("Invalid choice! Please pick a, b, or c.")
 
 
-# 2. إعدادات الواجهة
+# UI elements
 helper_checkbox = mo.ui.checkbox(
     value=True,
     label="تفعيل وضع التحدي الصعب",
